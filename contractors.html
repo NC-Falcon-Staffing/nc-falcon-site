@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Contractors — Request Electrical Manpower | NC Falcon</title>
+  <meta name="description" content="Contractors: request skilled, evaluated electricians from NC Falcon. Helpers to foremen, flexible staffing across NC & SC, response within 24 hours." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon-180.png" />
+</head>
+<body data-page="contractors">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-web.png" alt="NC Falcon" /><span class="brand-txt">Electrical Staffing<small>Charlotte, NC</small></span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contractors.html">For Contractors</a></li>
+        <li><a href="electricians.html">For Electricians</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn--primary" href="#request">Request Manpower</a></li>
+        <li><a class="lang-toggle" href="#" title="Spanish coming soon">ES</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / For Contractors</div>
+      <h1 data-cms="page_head.title">Skilled electricians, on your jobsite</h1>
+      <p data-cms="page_head.intro">Short-handed? Scaling up? Tell us what your project needs and we'll match the right people — evaluated, reliable, and ready to work.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS / VALUE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-cms="how.eyebrow">How It Works</span>
+        <h2 data-cms="how.title">Manpower without the headache</h2>
+        <p data-cms="how.intro">Call us, email us, or submit the form below. We respond within 24 hours and get to work matching your project.</p>
+      </div>
+      <div class="grid grid-3" data-cms-list="how.steps" data-cms-type="steps">
+        <div class="card"><div class="icon">1</div><h3>Tell us your need</h3><p>Skill levels, headcount, location, start date, and duration. The more detail, the better the match.</p></div>
+        <div class="card"><div class="icon">2</div><h3>We match the crew</h3><p>We pull from electricians whose experience we've already evaluated and match them to your requirements.</p></div>
+        <div class="card"><div class="icon">3</div><h3>They show up ready</h3><p>Your crew arrives on site, on schedule, ready to work — backed by direct communication with our leadership.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSITIONS + INDUSTRIES -->
+  <section class="section section--gray">
+    <div class="container split">
+      <div>
+        <span class="eyebrow" data-cms="positions.eyebrow">Positions We Staff</span>
+        <h2 data-cms="positions.title">Every level of the trade</h2>
+        <ul class="checks mt-1" data-cms-list="positions.items" data-cms-type="checksStrong">
+          <li><strong>Helpers</strong></li>
+          <li><strong>Apprentices</strong></li>
+          <li><strong>Journeymen</strong></li>
+          <li><strong>Lead Electricians</strong></li>
+          <li><strong>Foremen</strong></li>
+        </ul>
+        <p class="mt-2" data-cms="positions.note">Need a single position filled or a full crew assembled? We scale to the job — short-term, long-term, and everything between. Per diem arrangements may be available depending on project requirements.</p>
+      </div>
+      <div>
+        <div class="card">
+          <h3 style="margin-bottom:1rem;" data-cms="industries.title">Industries we serve</h3>
+          <ul class="pills" data-cms-list="industries.items" data-cms-type="pills">
+            <li>Commercial Construction</li><li>Industrial Facilities</li><li>Manufacturing</li>
+            <li>Healthcare</li><li>Educational Facilities</li><li>Hospitality</li>
+            <li>Warehousing &amp; Distribution</li><li>Multi-Family Housing</li>
+            <li>Residential</li><li>Service &amp; Maintenance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUEST FORM -->
+  <section class="section" id="request">
+    <div class="container" style="max-width:840px;">
+      <div class="section-head">
+        <span class="eyebrow" data-cms="request.eyebrow">Request Manpower</span>
+        <h2 data-cms="request.title">Tell us what your project needs</h2>
+        <p>We respond to every request within 24 hours. Prefer to talk? Call us or email <a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a>.</p>
+      </div>
+
+      <div class="form-wrap">
+        <div class="notice"><strong>Fast response:</strong> <span data-cms="request.notice">All inquiries receive a reply within 24 hours.</span></div>
+        <form data-nc-form name="contractor-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="contractor-request" />
+          <p class="hp-field" hidden aria-hidden="true"><label>Leave this field empty<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <input type="hidden" name="form_type" value="Contractor Manpower Request" />
+          <div class="form-row">
+            <div class="field">
+              <label for="c-company">Company Name <span class="req">*</span></label>
+              <input id="c-company" name="company_name" type="text" required />
+            </div>
+            <div class="field">
+              <label for="c-contact">Contact Name <span class="req">*</span></label>
+              <input id="c-contact" name="contact_name" type="text" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="c-phone">Phone Number <span class="req">*</span></label>
+              <input id="c-phone" name="phone" type="tel" required />
+            </div>
+            <div class="field">
+              <label for="c-email">Email Address <span class="req">*</span></label>
+              <input id="c-email" name="email" type="email" required />
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-location">Project Location <span class="req">*</span></label>
+            <input id="c-location" name="project_location" type="text" placeholder="City, State" required />
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="c-workers">Number of Workers Needed</label>
+              <input id="c-workers" name="workers_needed" type="number" min="1" />
+            </div>
+            <div class="field">
+              <label for="c-skill">Skill Level Needed</label>
+              <select id="c-skill" name="skill_level">
+                <option value="">Select…</option>
+                <option>Helper</option>
+                <option>Apprentice</option>
+                <option>Journeyman</option>
+                <option>Lead Electrician</option>
+                <option>Foreman</option>
+                <option>Mixed crew</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="c-start">Start Date</label>
+              <input id="c-start" name="start_date" type="date" />
+            </div>
+            <div class="field">
+              <label for="c-duration">Estimated Duration</label>
+              <input id="c-duration" name="duration" type="text" placeholder="e.g. 6 weeks, ongoing" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="c-notes">Additional Notes</label>
+            <textarea id="c-notes" name="notes" placeholder="Scope, certifications required, shift details, anything else we should know."></textarea>
+          </div>
+          <button class="btn btn--primary btn--lg btn--block" type="submit">Submit Request</button>
+          <p class="form-status" role="status" aria-live="polite" style="margin-top:1rem;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-white-web.png" alt="NC Falcon" /></a><p>Family-owned electrical staffing in Charlotte, NC. Dependable manpower for contractors, steady work for skilled electricians.</p></div>
+        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Get Started</h4><ul class="footer-links"><li><a href="contractors.html">For Contractors</a></li><li><a href="electricians.html">For Electricians</a></li><li><a href="contact.html#meeting">Request a Meeting</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a></li><li><a href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a></li><li><a href="tel:+19803710474">(980) 371-0474</a></li>
+            <li>Charlotte, North Carolina</li><li>Serving NC &amp; SC</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> NC Falcon. All rights reserved.</span><span>Professional · Reliable · Family-Owned</span></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/cms-content.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery — NC Falcon Electrical Staffing</title>
+  <meta name="description" content="See NC Falcon's crews, jobsites, and electrical work across the Carolinas. Real photos of our team and projects." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon-180.png" />
+</head>
+<body data-page="gallery">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-web.png" alt="NC Falcon" /><span class="brand-txt">Electrical Staffing<small>Charlotte, NC</small></span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contractors.html">For Contractors</a></li>
+        <li><a href="electricians.html">For Electricians</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn--primary" href="contractors.html#request">Request Manpower</a></li>
+        <li><a class="lang-toggle" href="#" title="Spanish coming soon">ES</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Gallery</div>
+      <h1 data-cms="page_head.title">Our crews, our work, our culture</h1>
+      <p data-cms="page_head.intro">Real people doing real work across the Carolinas. Photos coming soon as we capture our team and jobsites.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="notice" data-gallery-notice><strong>No photos yet:</strong> add photos through the site editor (<code>/admin</code> → Gallery Photos) and they'll appear here automatically.</div>
+
+      <div class="gallery" data-gallery>
+        <div class="ph"><span>👥</span>Team group photo</div>
+        <div class="ph"><span>👷</span>Crew members working</div>
+        <div class="ph"><span>⚡</span>Electrical installation</div>
+        <div class="ph"><span>🏗</span>Jobsite photo</div>
+        <div class="ph"><span>🏢</span>Commercial project</div>
+        <div class="ph"><span>🔧</span>Electrician at work</div>
+        <div class="ph"><span>🤝</span>Ownership / leadership</div>
+        <div class="ph"><span>🎉</span>Company gathering</div>
+        <div class="ph"><span>📸</span>Candid culture shot</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="container" style="text-align:center;">
+      <h2 data-cms="cta.title">Want to be part of the picture?</h2>
+      <p style="color:var(--gray-200);max-width:560px;margin:0.5rem auto 1.75rem;" data-cms="cta.text">Whether you're hiring electricians or looking for steady work, NC Falcon is ready.</p>
+      <a class="btn btn--primary btn--lg" href="contractors.html#request" style="margin-right:0.5rem;" data-cms="cta.primary_button">Request Manpower</a>
+      <a class="btn btn--outline btn--lg" href="electricians.html#apply" data-cms="cta.secondary_button">Apply for Work</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-white-web.png" alt="NC Falcon" /></a><p>Family-owned electrical staffing in Charlotte, NC. Dependable manpower for contractors, steady work for skilled electricians.</p></div>
+        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Get Started</h4><ul class="footer-links"><li><a href="contractors.html">For Contractors</a></li><li><a href="electricians.html">For Electricians</a></li><li><a href="contact.html#meeting">Request a Meeting</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a></li><li><a href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a></li><li><a href="tel:+19803710474">(980) 371-0474</a></li>
+            <li>Charlotte, North Carolina</li><li>Serving NC &amp; SC</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> NC Falcon. All rights reserved.</span><span>Professional · Reliable · Family-Owned</span></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/cms-content.js"></script>
+</body>
+</html>

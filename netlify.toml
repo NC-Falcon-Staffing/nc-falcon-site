@@ -1,0 +1,60 @@
+# Netlify configuration for the NC Falcon site
+[build]
+  publish = "."
+
+# Don't cache content files so edits show up right away
+[[headers]]
+  for = "/content/*"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+# ---------------------------------------------------------------
+# Keep internal docs out of the public site.
+#
+# publish = "." means every committed file is served, so anything
+# committed here is downloadable by anyone who guesses the URL.
+#
+# The best protection is simply not committing these files. These
+# rules are a backstop in case one gets uploaded by accident.
+#
+# NOTE: Netlify only allows "*" at the END of a path. Patterns like
+# "/*.md" look right but match nothing, so each file is listed
+# explicitly. Add a block here if you commit another internal doc.
+# ---------------------------------------------------------------
+[[redirects]]
+  from = "/README.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/DEPLOY-GUIDE.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/CMS-SETUP-GUIDE.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/setup-walkthrough.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/NC FALCON WEBSITE PROJECT BRIEF.docx"
+  to = "/404.html"
+  status = 404
+  force = true
+
+# Basic security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"

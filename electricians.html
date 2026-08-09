@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Electricians — Apply for Work | NC Falcon</title>
+  <meta name="description" content="Electricians: apply to NC Falcon for steady work and professional growth across NC & SC. Upload your resume and certifications. Helpers to foremen welcome." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon-180.png" />
+</head>
+<body data-page="electricians">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-web.png" alt="NC Falcon" /><span class="brand-txt">Electrical Staffing<small>Charlotte, NC</small></span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contractors.html">For Contractors</a></li>
+        <li><a href="electricians.html">For Electricians</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn--primary" href="#apply">Apply Now</a></li>
+        <li><a class="lang-toggle" href="#" title="Spanish coming soon">ES</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / For Electricians</div>
+      <h1 data-cms="page_head.title">Steady work. Real growth. A team that has your back.</h1>
+      <p data-cms="page_head.intro">NC Falcon connects skilled electricians with consistent opportunities across the Carolinas. Apply once, and we'll match you to work that fits your experience.</p>
+    </div>
+  </section>
+
+  <!-- WHY WORK WITH US -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-cms="why.eyebrow">Why Work With NC Falcon</span>
+        <h2 data-cms="why.title">We treat our electricians like family</h2>
+        <p data-cms="why.intro">We come from the field. We know steady work and fair treatment matter — so that's what we deliver.</p>
+      </div>
+      <div class="grid grid-3" data-cms-list="why.cards" data-cms-type="cards">
+        <div class="card"><div class="icon">📅</div><h3>Consistent Work</h3><p>We keep our electricians busy with opportunities matched to your skill level and location.</p></div>
+        <div class="card"><div class="icon">📈</div><h3>Professional Growth</h3><p>Helper to foreman — we want to see you advance, and we connect you with work that builds your career.</p></div>
+        <div class="card"><div class="icon">💬</div><h3>Direct Communication</h3><p>You talk to real people who answer fast and follow through. No runaround.</p></div>
+        <div class="card"><div class="icon">📍</div><h3>Carolinas &amp; Beyond</h3><p>Work across NC &amp; SC, with opportunities nationwide and possible per diem depending on the project.</p></div>
+        <div class="card"><div class="icon">💵</div><h3>Fair Pay</h3><p>Competitive rates that respect your skills and experience.</p></div>
+        <div class="card"><div class="icon">🤝</div><h3>Relationships First</h3><p>We invest in the people we place. You're not a number here.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POSITIONS -->
+  <section class="section section--navy">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" data-cms="positions.eyebrow">Now Hiring</span>
+        <h2 data-cms="positions.title">Positions at every level</h2>
+        <p data-cms="positions.intro">Wherever you are in your career, we have opportunities for you.</p>
+      </div>
+      <ul class="pills" style="justify-content:center;" data-cms-list="positions.items" data-cms-type="pills">
+        <li>Helpers</li><li>Apprentices</li><li>Journeymen</li><li>Lead Electricians</li><li>Foremen</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- APPLICATION FORM -->
+  <section class="section" id="apply">
+    <div class="container" style="max-width:840px;">
+      <div class="section-head">
+        <span class="eyebrow" data-cms="apply.eyebrow">Apply Online</span>
+        <h2 data-cms="apply.title">Start your application</h2>
+        <p>Fill out the form below and upload your resume. Questions? Email <a href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a>. We respond within 24 hours.</p>
+      </div>
+
+      <div class="form-wrap">
+        <div class="notice"><strong>Quick reply:</strong> <span data-cms="apply.notice">Every applicant hears back within 24 hours.</span></div>
+        <form data-nc-form name="electrician-application" enctype="multipart/form-data" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="electrician-application" />
+          <p class="hp-field" hidden aria-hidden="true"><label>Leave this field empty<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <input type="hidden" name="form_type" value="Electrician Application" />
+          <div class="field">
+            <label for="e-name">Name <span class="req">*</span></label>
+            <input id="e-name" name="name" type="text" required />
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="e-phone">Phone Number <span class="req">*</span></label>
+              <input id="e-phone" name="phone" type="tel" required />
+            </div>
+            <div class="field">
+              <label for="e-email">Email Address <span class="req">*</span></label>
+              <input id="e-email" name="email" type="email" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="e-city">City <span class="req">*</span></label>
+              <input id="e-city" name="city" type="text" required />
+            </div>
+            <div class="field">
+              <label for="e-years">Years of Experience</label>
+              <input id="e-years" name="years_experience" type="number" min="0" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="e-skill">Skill Level</label>
+              <select id="e-skill" name="skill_level">
+                <option value="">Select…</option>
+                <option>Helper</option>
+                <option>Apprentice</option>
+                <option>Journeyman</option>
+                <option>Lead Electrician</option>
+                <option>Foreman</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="e-certs">Certifications</label>
+              <input id="e-certs" name="certifications" type="text" placeholder="e.g. OSHA 10, state license #" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="e-resume">Resume Upload</label>
+            <input id="e-resume" name="resume" type="file" accept=".pdf,.doc,.docx" />
+            <p class="form-note">PDF or Word document. Max 8 MB.</p>
+          </div>
+          <div class="field">
+            <label for="e-skills">Additional Skills</label>
+            <textarea id="e-skills" name="additional_skills" placeholder="Specialties, equipment, languages, availability, anything that sets you apart."></textarea>
+          </div>
+          <button class="btn btn--primary btn--lg btn--block" type="submit">Submit Application</button>
+          <p class="form-status" role="status" aria-live="polite" style="margin-top:1rem;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-white-web.png" alt="NC Falcon" /></a><p>Family-owned electrical staffing in Charlotte, NC. Dependable manpower for contractors, steady work for skilled electricians.</p></div>
+        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Get Started</h4><ul class="footer-links"><li><a href="contractors.html">For Contractors</a></li><li><a href="electricians.html">For Electricians</a></li><li><a href="contact.html#meeting">Request a Meeting</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a></li><li><a href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a></li><li><a href="tel:+19803710474">(980) 371-0474</a></li>
+            <li>Charlotte, North Carolina</li><li>Serving NC &amp; SC</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> NC Falcon. All rights reserved.</span><span>Professional · Reliable · Family-Owned</span></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/cms-content.js"></script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+# =============================================================
+# NC Falcon — Site Editor configuration (Decap CMS)
+#
+# ONE PLACEHOLDER LEFT to fill in
+# (full steps in CMS-SETUP-GUIDE.md at the project root):
+#   1. repo — DONE, set to the NC-Falcon-Staffing org repo below
+#   2. YOUR-DECAPBRIDGE-SITE-ID → from a free decapbridge.com account
+# =============================================================
+
+backend:
+  name: git-gateway
+  repo: NC-Falcon-Staffing/nc-falcon-site
+  branch: main
+  identity_url: https://auth.decapbridge.com/sites/YOUR-DECAPBRIDGE-SITE-ID
+  gateway_url: https://gateway.decapbridge.com
+  commit_messages:
+    create: Create {{collection}} "{{slug}}" — {{author-name}} via site editor
+    update: Update {{collection}} "{{slug}}" — {{author-name}} via site editor
+    delete: Delete {{collection}} "{{slug}}" — {{author-name}} via site editor
+    uploadMedia: Upload "{{path}}" — {{author-name}} via site editor
+    deleteMedia: Delete "{{path}}" — {{author-name}} via site editor
+
+# Where uploaded photos are stored
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# No live preview pane (keeps the editor simple)
+editor:
+  preview: false
+
+collections:
+  # ----------------------------------------------------------
+  # SITE-WIDE SETTINGS
+  # ----------------------------------------------------------
+  - name: "settings"
+    label: "⚙️ Contact Info & Footer"
+    description: "Email addresses, phone, location, and the footer text shown on every page."
+    files:
+      - name: "site"
+        label: "Contact Info & Footer"
+        file: "content/settings.json"
+        fields:
+          - { label: "General Email", name: "email_general", widget: "string" }
+          - { label: "Careers Email", name: "email_careers", widget: "string" }
+          - { label: "Phone", name: "phone", widget: "string", hint: "Shown on the Contact page. Example: (704) 555-0123" }
+          - { label: "Location", name: "location", widget: "string" }
+          - { label: "Service Area", name: "service_area", widget: "string" }
+          - { label: "Response Time", name: "response_time", widget: "string" }
+          - { label: "Footer Description", name: "footer_description", widget: "text" }
+          - { label: "Footer Motto", name: "footer_motto", widget: "string" }
+
+  # ----------------------------------------------------------
+  # GALLERY
+  # ----------------------------------------------------------
+  - name: "gallery"
+    label: "📸 Gallery Photos"
+    description: "Add, remove, and reorder the photos on the Gallery page. Drag items to reorder."
+    files:
+      - name: "gallery"
+        label: "Gallery Page"
+        file: "content/gallery.json"
+        fields:
+          - label: "Page Heading"
+            name: "page_head"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Photos"
+            name: "photos"
+            widget: "list"
+            summary: "{{fields.caption}}"
+            hint: "Click 'Add Photos', upload a picture, and write a short caption. Drag to reorder."
+            fields:
+              - { label: "Photo", name: "image", widget: "image" }
+              - { label: "Caption", name: "caption", widget: "string" }
+          - label: "Bottom Banner"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Orange Button Label", name: "primary_button", widget: "string" }
+              - { label: "Outline Button Label", name: "secondary_button", widget: "string" }
+
+  # ----------------------------------------------------------
+  # TESTIMONIALS
+  # ----------------------------------------------------------
+  - name: "testimonials"
+    label: "💬 Testimonials"
+    description: "Quotes from contractors and electricians, shown on the home page. Leave empty to hide the section."
+    files:
+      - name: "testimonials"
+        label: "Testimonials"
+        file: "content/testimonials.json"
+        fields:
+          - label: "Section Heading"
+            name: "section"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+          - label: "Testimonials"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.author}}"
+            hint: "The home page shows these in order. Delete all of them to hide the whole section."
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Name", name: "author", widget: "string" }
+              - { label: "Role / Company", name: "role", widget: "string", required: false, hint: "Example: Project Manager, ABC Electric" }
+
+  # ----------------------------------------------------------
+  # PAGES
+  # ----------------------------------------------------------
+  - name: "pages"
+    label: "📄 Page Text"
+    description: "The words on each page of the site."
+    files:
+      - name: "home"
+        label: "Home Page"
+        file: "content/home.json"
+        fields:
+          - label: "Top Banner (Hero)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Small Badge", name: "badge", widget: "string" }
+              - { label: "Main Headline", name: "title", widget: "string" }
+              - { label: "Intro Paragraph", name: "lead", widget: "text" }
+              - { label: "Orange Button Label", name: "primary_button", widget: "string" }
+              - { label: "Outline Button Label", name: "secondary_button", widget: "string" }
+          - label: "Why NC Falcon Section"
+            name: "why"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon (emoji)", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Statistics Bar"
+            name: "stats"
+            widget: "list"
+            collapsed: true
+            summary: "{{fields.number}} — {{fields.label}}"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Staffing Section"
+            name: "staffing"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "lead", widget: "text" }
+              - label: "Positions"
+                name: "positions"
+                widget: "list"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Position", name: "name", widget: "string" }
+                  - { label: "Short Description", name: "description", widget: "string" }
+              - { label: "Button Label", name: "button", widget: "string" }
+          - label: "Industries Box"
+            name: "industries"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Industries", name: "items", widget: "list", field: { label: "Industry", name: "item", widget: "string" } }
+          - label: "Bottom Call-to-Action"
+            name: "cta"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Contractor Panel Title", name: "contractor_title", widget: "string" }
+              - { label: "Contractor Panel Text", name: "contractor_text", widget: "text" }
+              - { label: "Contractor Button", name: "contractor_button", widget: "string" }
+              - { label: "Electrician Panel Title", name: "electrician_title", widget: "string" }
+              - { label: "Electrician Panel Text", name: "electrician_text", widget: "text" }
+              - { label: "Electrician Button", name: "electrician_button", widget: "string" }
+
+      - name: "about"
+        label: "About Page"
+        file: "content/about.json"
+        fields:
+          - label: "Page Heading"
+            name: "page_head"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Mission Section"
+            name: "mission"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Lead Paragraph", name: "lead", widget: "text" }
+              - { label: "Second Paragraph", name: "text", widget: "text" }
+          - label: "Our Story Box"
+            name: "story"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Paragraph", name: "text", widget: "text" }
+          - label: "Core Values"
+            name: "values"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Value Cards"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon (emoji)", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "What Makes Us Different"
+            name: "difference"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Box Title", name: "box_title", widget: "string" }
+              - label: "Checklist Points"
+                name: "points"
+                widget: "list"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Point", name: "text", widget: "string" }
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Lead Paragraph", name: "lead", widget: "text" }
+              - { label: "Second Paragraph", name: "text", widget: "text" }
+          - label: "Team Section"
+            name: "team"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - label: "Team Cards"
+                name: "members"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Looking Ahead Section"
+            name: "future"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Text", name: "text", widget: "text" }
+              - { label: "Future Trades", name: "trades", widget: "list", field: { label: "Trade", name: "item", widget: "string" } }
+
+      - name: "contractors"
+        label: "For Contractors Page"
+        file: "content/contractors.json"
+        fields:
+          - label: "Page Heading"
+            name: "page_head"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+          - label: "How It Works"
+            name: "how"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Positions We Staff"
+            name: "positions"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Positions", name: "items", widget: "list", field: { label: "Position", name: "item", widget: "string" } }
+              - { label: "Note Below List", name: "note", widget: "text" }
+          - label: "Industries Box"
+            name: "industries"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Industries", name: "items", widget: "list", field: { label: "Industry", name: "item", widget: "string" } }
+          - label: "Request Form Section"
+            name: "request"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Notice Banner", name: "notice", widget: "string" }
+
+      - name: "electricians"
+        label: "For Electricians Page"
+        file: "content/electricians.json"
+        fields:
+          - label: "Page Heading"
+            name: "page_head"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Why Work With Us"
+            name: "why"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Icon (emoji)", name: "icon", widget: "string" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Text", name: "text", widget: "text" }
+          - label: "Now Hiring Section"
+            name: "positions"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Positions", name: "items", widget: "list", field: { label: "Position", name: "item", widget: "string" } }
+          - label: "Application Form Section"
+            name: "apply"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Notice Banner", name: "notice", widget: "string" }
+
+      - name: "contact"
+        label: "Contact Page"
+        file: "content/contact.json"
+        fields:
+          - label: "Page Heading"
+            name: "page_head"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Contact Info Column"
+            name: "info"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Lead Paragraph", name: "lead", widget: "text" }
+          - label: "Message Form"
+            name: "form"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Notice Banner", name: "notice", widget: "string" }
+          - label: "Meeting Request Section"
+            name: "meeting"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }

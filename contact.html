@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact NC Falcon — Charlotte, NC Electrical Staffing</title>
+  <meta name="description" content="Contact NC Falcon by phone, email, or form. Request manpower, apply for work, or schedule a meeting. Response within 24 hours. Charlotte, North Carolina." />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <link rel="apple-touch-icon" href="images/favicon-180.png" />
+</head>
+<body data-page="contact">
+
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-web.png" alt="NC Falcon" /><span class="brand-txt">Electrical Staffing<small>Charlotte, NC</small></span></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contractors.html">For Contractors</a></li>
+        <li><a href="electricians.html">For Electricians</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav-cta"><a class="btn btn--primary" href="contractors.html#request">Request Manpower</a></li>
+        <li><a class="lang-toggle" href="#" title="Spanish coming soon">ES</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact</div>
+      <h1 data-cms="page_head.title">Let's talk</h1>
+      <p data-cms="page_head.intro">Call, email, or send a message. However you reach us, you'll hear back within 24 hours.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split">
+      <!-- CONTACT INFO -->
+      <div>
+        <span class="eyebrow" data-cms="info.eyebrow">Get In Touch</span>
+        <h2 data-cms="info.title">Contact information</h2>
+        <p class="lead" data-cms="info.lead">Based in Charlotte, North Carolina — serving NC &amp; SC, and open to opportunities nationwide.</p>
+        <ul class="info-list mt-2">
+          <li>
+            <span class="ico">✉️</span>
+            <span><span class="lbl">General Inquiries</span><br /><a class="val" href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a></span>
+          </li>
+          <li>
+            <span class="ico">💼</span>
+            <span><span class="lbl">Careers / Applications</span><br /><a class="val" href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a></span>
+          </li>
+          <li>
+            <span class="ico">📞</span>
+            <span><span class="lbl">Phone</span><br /><a class="val" href="tel:+19803710474" data-cms-setting="phone">(980) 371-0474</a></span>
+          </li>
+          <li>
+            <span class="ico">📍</span>
+            <span><span class="lbl">Location</span><br /><span class="val" data-cms-setting="location">Charlotte, North Carolina</span></span>
+          </li>
+          <li>
+            <span class="ico">⏱</span>
+            <span><span class="lbl">Response Time</span><br /><span class="val" data-cms-setting="response_time">Within 24 hours</span></span>
+          </li>
+        </ul>
+
+        <div class="card mt-2" style="background:var(--gray-100);">
+          <h3 style="margin-bottom:0.6rem;">Quick links</h3>
+          <p style="margin-bottom:0.8rem;">Know what you need? Go straight to the right form:</p>
+          <a class="btn btn--navy" href="contractors.html#request" style="margin-right:0.5rem;">Request Manpower</a>
+          <a class="btn btn--ghost" href="electricians.html#apply">Apply for Work</a>
+        </div>
+      </div>
+
+      <!-- CONTACT FORM -->
+      <div>
+        <div class="form-wrap">
+          <h3 style="margin-bottom:1rem;" data-cms="form.title">Send us a message</h3>
+          <div class="notice"><strong>24-hour response</strong> <span data-cms="form.notice">on every inquiry.</span></div>
+          <form data-nc-form name="contact-message" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="contact-message" />
+          <p class="hp-field" hidden aria-hidden="true"><label>Leave this field empty<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+            <input type="hidden" name="form_type" value="General Contact" />
+            <div class="field">
+              <label for="m-name">Name <span class="req">*</span></label>
+              <input id="m-name" name="name" type="text" required />
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="m-email">Email <span class="req">*</span></label>
+                <input id="m-email" name="email" type="email" required />
+              </div>
+              <div class="field">
+                <label for="m-phone">Phone</label>
+                <input id="m-phone" name="phone" type="tel" />
+              </div>
+            </div>
+            <div class="field">
+              <label for="m-type">I am a…</label>
+              <select id="m-type" name="inquiry_type">
+                <option value="">Select…</option>
+                <option>Contractor needing manpower</option>
+                <option>Electrician looking for work</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="m-message">Message <span class="req">*</span></label>
+              <textarea id="m-message" name="message" required></textarea>
+            </div>
+            <button class="btn btn--primary btn--lg btn--block" type="submit">Send Message</button>
+            <p class="form-status" role="status" aria-live="polite" style="margin-top:1rem;"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEETING REQUEST -->
+  <section class="section section--gray" id="meeting">
+    <div class="container" style="max-width:760px;">
+      <div class="section-head">
+        <span class="eyebrow" data-cms="meeting.eyebrow">Schedule a Meeting</span>
+        <h2 data-cms="meeting.title">Want to sit down and talk it through?</h2>
+        <p data-cms="meeting.intro">Tell us when works and what you'd like to discuss. We'll confirm a time that fits.</p>
+      </div>
+      <div class="form-wrap">
+        <form data-nc-form name="meeting-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/thank-you.html">
+          <input type="hidden" name="form-name" value="meeting-request" />
+          <p class="hp-field" hidden aria-hidden="true"><label>Leave this field empty<input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <input type="hidden" name="form_type" value="Meeting Request" />
+          <div class="form-row">
+            <div class="field">
+              <label for="mr-name">Name <span class="req">*</span></label>
+              <input id="mr-name" name="name" type="text" required />
+            </div>
+            <div class="field">
+              <label for="mr-company">Company</label>
+              <input id="mr-company" name="company" type="text" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="mr-email">Email <span class="req">*</span></label>
+              <input id="mr-email" name="email" type="email" required />
+            </div>
+            <div class="field">
+              <label for="mr-phone">Phone</label>
+              <input id="mr-phone" name="phone" type="tel" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="mr-date">Preferred Date</label>
+              <input id="mr-date" name="preferred_date" type="date" />
+            </div>
+            <div class="field">
+              <label for="mr-time">Preferred Time</label>
+              <input id="mr-time" name="preferred_time" type="text" placeholder="e.g. morning, 2pm" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="mr-topic">What would you like to discuss?</label>
+            <textarea id="mr-topic" name="topic"></textarea>
+          </div>
+          <button class="btn btn--navy btn--lg btn--block" type="submit">Request Meeting</button>
+          <p class="form-status" role="status" aria-live="polite" style="margin-top:1rem;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-white-web.png" alt="NC Falcon" /></a><p>Family-owned electrical staffing in Charlotte, NC. Dependable manpower for contractors, steady work for skilled electricians.</p></div>
+        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Get Started</h4><ul class="footer-links"><li><a href="contractors.html">For Contractors</a></li><li><a href="electricians.html">For Electricians</a></li><li><a href="contact.html#meeting">Request a Meeting</a></li></ul></div>
+        <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a></li><li><a href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a></li><li><a href="tel:+19803710474">(980) 371-0474</a></li>
+            <li>Charlotte, North Carolina</li><li>Serving NC &amp; SC</li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>© <span id="year"></span> NC Falcon. All rights reserved.</span><span>Professional · Reliable · Family-Owned</span></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="js/main.js"></script>
+  <script src="js/cms-content.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+{
+  "page_head": {
+    "title": "Skilled electricians, on your jobsite",
+    "intro": "Short-handed? Scaling up? Tell us what your project needs and we'll match the right people — evaluated, reliable, and ready to work."
+  },
+  "how": {
+    "eyebrow": "How It Works",
+    "title": "Manpower without the headache",
+    "intro": "Call us, email us, or submit the form below. We respond within 24 hours and get to work matching your project.",
+    "steps": [
+      { "title": "Tell us your need", "text": "Skill levels, headcount, location, start date, and duration. The more detail, the better the match." },
+      { "title": "We match the crew", "text": "We pull from electricians whose experience we've already evaluated and match them to your requirements." },
+      { "title": "They show up ready", "text": "Your crew arrives on site, on schedule, ready to work — backed by direct communication with our leadership." }
+    ]
+  },
+  "positions": {
+    "eyebrow": "Positions We Staff",
+    "title": "Every level of the trade",
+    "items": ["Helpers", "Apprentices", "Journeymen", "Lead Electricians", "Foremen"],
+    "note": "Need a single position filled or a full crew assembled? We scale to the job — short-term, long-term, and everything between. Per diem arrangements may be available depending on project requirements."
+  },
+  "industries": {
+    "title": "Industries we serve",
+    "items": [
+      "Commercial Construction",
+      "Industrial Facilities",
+      "Manufacturing",
+      "Healthcare",
+      "Educational Facilities",
+      "Hospitality",
+      "Warehousing & Distribution",
+      "Multi-Family Housing",
+      "Residential",
+      "Service & Maintenance"
+    ]
+  },
+  "request": {
+    "eyebrow": "Request Manpower",
+    "title": "Tell us what your project needs",
+    "notice": "All inquiries receive a reply within 24 hours."
+  }
+}
