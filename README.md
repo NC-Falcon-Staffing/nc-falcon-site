@@ -57,10 +57,3 @@ Then open `http://localhost:8000`. Opening `index.html` directly also works, but
 ## Deploying
 
 Commit to `main`. Netlify rebuilds in under a minute. Failed builds leave the previous version live; the Deploys tab has the log and lets you roll back.
-
-## Known gaps
-
-- No photography anywhere. Gallery is off until real jobsite photos exist.
-- Spanish version not built. The `ES` toggle in the nav is a placeholder.
-- No testimonials. The home page section stays hidden until `content/testimonials.json` has entries.
-- `admin/config.yml` still needs a DecapBridge site ID before the editor will accept logins.
