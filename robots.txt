@@ -1,0 +1,12 @@
+# NC Falcon Staffing
+# Crawling is allowed. Pages that should stay out of search results
+# (thank-you, 404) use a noindex meta tag instead — blocking them here
+# would stop crawlers from ever reading that tag.
+
+User-agent: *
+Allow: /
+
+# Site editor UI — no reason to index it
+Disallow: /admin/
+
+Sitemap: https://ncfalconstaffing.com/sitemap.xml
