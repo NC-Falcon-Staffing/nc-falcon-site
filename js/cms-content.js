@@ -96,6 +96,22 @@
   function applySettings(s) {
     if (!s) return;
 
+    // ---- Gallery on/off switch -------------------------------------
+    // Controlled by "Show the Gallery page" in the site editor. While it's
+    // off, every link to the Gallery disappears from the menu and footer on
+    // every page, and anyone landing on gallery.html directly is sent home
+    // rather than shown an empty grid. Turning it back on requires no code.
+    if (s.show_gallery !== true) {
+      document.querySelectorAll('a[href$="gallery.html"]').forEach(function (a) {
+        var li = a.closest("li");
+        (li || a).style.display = "none";
+      });
+      if (document.body.getAttribute("data-page") === "gallery") {
+        window.location.replace("index.html");
+        return;
+      }
+    }
+
     // Footer description + motto
     var desc = document.querySelector(".site-footer .footer-brand p");
     if (desc && s.footer_description) desc.textContent = s.footer_description;
