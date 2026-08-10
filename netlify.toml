@@ -8,45 +8,13 @@
   [headers.values]
     Cache-Control = "no-cache"
 
-# ---------------------------------------------------------------
-# Keep internal docs out of the public site.
-#
-# publish = "." means every committed file is served, so anything
-# committed here is downloadable by anyone who guesses the URL.
-#
-# The best protection is simply not committing these files. These
-# rules are a backstop in case one gets uploaded by accident.
-#
-# NOTE: Netlify only allows "*" at the END of a path. Patterns like
-# "/*.md" look right but match nothing, so each file is listed
-# explicitly. Add a block here if you commit another internal doc.
-# ---------------------------------------------------------------
+# publish = "." serves every committed file, so any document in the repo is
+# reachable by URL. This returns 404 instead. Working notes live in
+# _local-docs/ and are never committed, so they need no rule here.
+# Netlify only allows "*" at the END of a path, so "/*.md" matches nothing
+# and each file must be listed explicitly.
 [[redirects]]
   from = "/README.md"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/DEPLOY-GUIDE.md"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/CMS-SETUP-GUIDE.md"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/setup-walkthrough.md"
-  to = "/404.html"
-  status = 404
-  force = true
-
-[[redirects]]
-  from = "/NC FALCON WEBSITE PROJECT BRIEF.docx"
   to = "/404.html"
   status = 404
   force = true

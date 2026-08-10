@@ -33,11 +33,40 @@
     });
   }
 
+  /* Icon set. 24x24 stroke paths; stroke="currentColor" so CSS sets the colour.
+     Content files store an icon NAME ("clock"); unknown names fall back to bolt.
+     To add one: add the path here AND the name to the dropdown in admin/config.yml. */
+  var ICON_PATHS = {
+    "clock": '<circle cx="12" cy="12" r="8.7"/><path d="M12 6.8V12l3.4 2.2"/>',
+    "phone": '<path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a1.5 1.5 0 0 1-1.6 1.5A16.5 16.5 0 0 1 4.9 5.1 1.5 1.5 0 0 1 6.5 3.5z"/>',
+    "shield-check": '<path d="M12 3l7.5 2.8v5.7c0 4.7-3.2 7.6-7.5 8.5-4.3-.9-7.5-3.8-7.5-8.5V5.8z"/><path d="M8.8 12.2l2.2 2.2 4.2-4.4"/>',
+    "shield": '<path d="M12 3l7.5 2.8v5.7c0 4.7-3.2 7.6-7.5 8.5-4.3-.9-7.5-3.8-7.5-8.5V5.8z"/>',
+    "sliders": '<path d="M4 8h9M19 8h1M4 16h5M15 16h5"/><circle cx="16" cy="8" r="2.4"/><circle cx="12" cy="16" r="2.4"/>',
+    "map-pin": '<path d="M12 21.2c4.4-4.6 6.6-8.1 6.6-10.6a6.6 6.6 0 1 0-13.2 0c0 2.5 2.2 6 6.6 10.6z"/><circle cx="12" cy="10.4" r="2.4"/>',
+    "banknote": '<rect x="2.5" y="6" width="19" height="12" rx="2"/><circle cx="12" cy="12" r="2.6"/><path d="M6.2 12h.01M17.8 12h.01"/>',
+    "users": '<circle cx="8.6" cy="8.2" r="3.2"/><path d="M2.8 19.6a5.8 5.8 0 0 1 11.6 0"/><circle cx="17.4" cy="9.6" r="2.4"/><path d="M16 14.4a4.8 4.8 0 0 1 5.2 5.2"/>',
+    "chat": '<path d="M20.5 12a8 8 0 0 1-8.5 8 9 9 0 0 1-3.2-.6L3.5 21l1.3-4.5A8 8 0 1 1 20.5 12z"/>',
+    "trend-up": '<path d="M3 16.5l5.6-5.6 3.5 3.5L20.2 6"/><path d="M15 6h5.2v5.2"/>',
+    "home": '<path d="M3.5 10.8L12 3.5l8.5 7.3"/><path d="M5.9 9.6V20h12.2V9.6"/>',
+    "calendar": '<rect x="3.5" y="5" width="17" height="15.5" rx="2"/><path d="M8 2.8v4M16 2.8v4M3.5 10.5h17"/>',
+    "envelope": '<rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="M2.9 7.2l9.1 6 9.1-6"/>',
+    "briefcase": '<rect x="2.5" y="7.5" width="19" height="12" rx="2"/><path d="M8.5 7.5V5.8a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v1.7"/><path d="M2.5 12.6h19"/>',
+    "clipboard": '<rect x="5" y="4.5" width="14" height="16" rx="2"/><path d="M9 4.6V3.5A1.5 1.5 0 0 1 10.5 2h3A1.5 1.5 0 0 1 15 3.5v1.1"/><path d="M9 11h6M9 14.8h4"/>',
+    "bolt": '<path d="M13.6 2.4L5 13.6h5.6l-1.2 8L18.6 10.4H13z"/>',
+    "hard-hat": '<path d="M2.6 18h18.8"/><path d="M5.6 18v-1.4a6.4 6.4 0 0 1 12.8 0V18"/><path d="M9.9 16.6v-4.3a2.1 2.1 0 0 1 4.2 0v4.3"/>'
+  };
+
+  function icon(name) {
+    var p = ICON_PATHS[name] || ICON_PATHS.bolt;
+    return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" ' +
+           'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + p + "</svg>";
+  }
+
   // ---------- list renderers: data-cms-list="path" data-cms-type="cards" ----------
   var renderers = {
     cards: function (items) {
       return items.map(function (i) {
-        return '<div class="card"><div class="icon">' + esc(i.icon) + "</div><h3>" +
+        return '<div class="card"><div class="icon">' + icon(i.icon) + "</div><h3>" +
           esc(i.title) + "</h3><p>" + esc(i.text) + "</p></div>";
       }).join("");
     },
@@ -96,11 +125,8 @@
   function applySettings(s) {
     if (!s) return;
 
-    // ---- Gallery on/off switch -------------------------------------
-    // Controlled by "Show the Gallery page" in the site editor. While it's
-    // off, every link to the Gallery disappears from the menu and footer on
-    // every page, and anyone landing on gallery.html directly is sent home
-    // rather than shown an empty grid. Turning it back on requires no code.
+    // Gallery on/off, set by "Show the Gallery page" in the site editor.
+    // When off: hide every Gallery link, and redirect gallery.html to home.
     if (s.show_gallery !== true) {
       document.querySelectorAll('a[href$="gallery.html"]').forEach(function (a) {
         var li = a.closest("li");
@@ -118,10 +144,9 @@
     var bottom = document.querySelectorAll(".site-footer .footer-bottom > span");
     if (bottom.length > 1 && s.footer_motto) bottom[1].textContent = s.footer_motto;
 
-    // Footer contact column. Order: info email, careers email, phone,
-    // location, service area. Match the plain-text items (no link inside)
-    // by position among themselves so adding/removing linked items above
-    // them doesn't silently shift the wrong text.
+    // Footer contact column. Match the plain-text items (those with no link)
+    // by position among themselves, so adding a linked item above them
+    // doesn't shift the wrong line.
     var lists = document.querySelectorAll(".site-footer ul.footer-links");
     var contactList = lists.length ? lists[lists.length - 1] : null;
     if (contactList) {

@@ -12,39 +12,88 @@
   "story": {
     "title": "Our Story",
     "paragraphs": [
-      { "text": "NC Falcon was founded by the Falcon family in North Carolina and built from real experience in the electrical industry." },
-      { "text": "Ownership brings more than 20 years of electrical experience, while the next generation continues to grow the business through recruiting, contractor relationships, and workforce development." },
-      { "text": "We've placed more than 100 electricians over time and keep roughly 20 actively working — recruited primarily through referrals, industry connections, and word of mouth." }
+      {
+        "text": "NC Falcon was founded by the Falcon family in North Carolina and built from real experience in the electrical industry."
+      },
+      {
+        "text": "Ownership brings more than 20 years of electrical experience, while the next generation continues to grow the business through recruiting, contractor relationships, and workforce development."
+      },
+      {
+        "text": "We've placed more than 100 electricians over time and keep roughly 20 actively working. Most come to us through referrals, industry connections, and word of mouth."
+      }
     ]
   },
   "values": {
     "eyebrow": "What We Stand For",
     "title": "Our core values",
     "cards": [
-      { "icon": "🤝", "title": "Relationships", "text": "We build long-term partnerships, not one-off transactions." },
-      { "icon": "🛡", "title": "Reliability", "text": "When we commit, we show up. Every time." },
-      { "icon": "💬", "title": "Communication", "text": "Clear, direct, and responsive — no runaround." },
-      { "icon": "🔧", "title": "Flexibility", "text": "We adapt to your project, your timeline, your needs." },
-      { "icon": "💪", "title": "Hard Work", "text": "We come from the field. We respect the work and the people who do it." },
-      { "icon": "🚀", "title": "Opportunity", "text": "Steady work and real growth for the electricians we place." },
-      { "icon": "👨‍👩‍👧", "title": "Family-Oriented", "text": "A culture built on trust, loyalty, and treating people right." },
-      { "icon": "⚡", "title": "Craft", "text": "Skilled electrical work, done safely and done right." }
+      {
+        "icon": "users",
+        "title": "Relationships",
+        "text": "We build long-term partnerships."
+      },
+      {
+        "icon": "shield",
+        "title": "Reliability",
+        "text": "When we commit, we show up. Every time."
+      },
+      {
+        "icon": "chat",
+        "title": "Communication",
+        "text": "Clear, direct, and responsive."
+      },
+      {
+        "icon": "sliders",
+        "title": "Flexibility",
+        "text": "We adapt to your project, your timeline, your needs."
+      },
+      {
+        "icon": "hard-hat",
+        "title": "Hard Work",
+        "text": "We come from the field. We respect the work and the people who do it."
+      },
+      {
+        "icon": "trend-up",
+        "title": "Opportunity",
+        "text": "Steady work and real growth for the electricians we place."
+      },
+      {
+        "icon": "home",
+        "title": "Family-Oriented",
+        "text": "A culture built on trust, loyalty, and treating people right."
+      }
     ]
   },
   "difference": {
     "box_title": "What makes NC Falcon different",
     "points": [
-      { "text": "Family-owned business" },
-      { "text": "Direct communication with company leadership" },
-      { "text": "Fast response times — within 24 hours" },
-      { "text": "Flexible staffing solutions" },
-      { "text": "Workers evaluated before placement" },
-      { "text": "Deep industry experience and field knowledge" },
-      { "text": "Relationship-focused approach" },
-      { "text": "Competitive pricing" }
+      {
+        "text": "Family-owned business"
+      },
+      {
+        "text": "Direct communication with company leadership"
+      },
+      {
+        "text": "Fast response times within 24 hours"
+      },
+      {
+        "text": "Flexible staffing solutions"
+      },
+      {
+        "text": "Workers evaluated before placement"
+      },
+      {
+        "text": "Deep industry experience and field knowledge"
+      },
+      {
+        "text": "Relationship-focused approach"
+      },
+      {
+        "text": "Competitive pricing"
+      }
     ],
     "eyebrow": "The Difference",
-    "title": "You're working with people, not a portal",
+    "title": "You're working with people who know the trade",
     "lead": "When you call NC Falcon, you reach the people who run the company and know the trade.",
     "text": "That means faster decisions, honest answers, and crews matched to your project by people who've actually done the work. We're small enough to care and experienced enough to deliver."
   },
@@ -52,15 +101,30 @@
     "eyebrow": "Who You'll Work With",
     "title": "Our team",
     "members": [
-      { "title": "Ownership & Operations", "text": "The Falcon family founder and ownership team — 20+ years of electrical experience guiding every decision." },
-      { "title": "Business Development", "text": "Melvin Falcon — contractor relationships, recruiting, business growth, and industry networking." },
-      { "title": "Office Administration", "text": "Our office team handles incoming calls, scheduling, follow-up, and support for contractors and applicants." }
+      {
+        "title": "Ownership & Operations",
+        "text": "The Falcon family founder and ownership team, with more than 20 years of electrical experience."
+      },
+      {
+        "title": "Business Development",
+        "text": "Melvin Falcon handles contractor relationships, recruiting, business growth, and industry networking."
+      },
+      {
+        "title": "Office Administration",
+        "text": "Our office team handles incoming calls, scheduling, follow-up, and support for contractors and applicants."
+      }
     ]
   },
   "future": {
     "eyebrow": "Looking Ahead",
     "title": "Growing with the trades",
-    "text": "Our focus today is 100% electrical staffing. As we grow, we're building toward additional trades — so contractors can rely on one trusted partner for more of their workforce needs.",
-    "trades": ["HVAC", "Plumbing", "Painting", "Cleaning", "General Labor"]
+    "text": "Our focus today is 100% electrical staffing. As we grow, we're building toward additional trades.",
+    "trades": [
+      "HVAC",
+      "Plumbing",
+      "Painting",
+      "Cleaning",
+      "General Labor"
+    ]
   }
 }

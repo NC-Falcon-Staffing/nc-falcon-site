@@ -1,111 +1,66 @@
 # NC Falcon — Website
 
-Static website for NC Falcon, a family-owned electrical staffing company in Charlotte, NC. Built as plain HTML/CSS/JavaScript so it loads fast, costs nothing to host, and isn't locked to any platform.
+Static site for NC Falcon Electrical Staffing. Plain HTML, CSS and JavaScript. No build step, no framework, no database.
 
-## Pages
+Live at **ncfalconstaffing.com**, hosted on Netlify, deployed automatically from the `main` branch.
 
-| File | Page |
-|------|------|
-| `index.html` | Home |
-| `about.html` | About Us (mission, story, values, team, future growth) |
-| `contractors.html` | For Contractors + manpower request form |
-| `electricians.html` | For Electricians + application form (resume upload) |
-| `contact.html` | Contact + general message form + meeting request form |
-| `gallery.html` | Gallery (placeholder tiles for real photos) |
+## Files
 
-Shared assets: `css/styles.css` (navy/gray/white theme) and `js/main.js` (mobile nav + form handling).
+```
+index.html            Home
+about.html            About
+contractors.html      For Contractors + manpower request form
+electricians.html     For Electricians + application form (resume upload)
+contact.html          Contact + message form + meeting request form
+gallery.html          Gallery (hidden unless enabled — see below)
+thank-you.html        Shown after any form submit
+404.html              Not found
 
-## Logo & favicon
+css/styles.css        All styling. Colours and spacing are variables at the top.
+js/main.js            Mobile nav, active link, form submit state
+js/cms-content.js     Loads /content JSON into the pages; holds the icon set
 
-The real Falcon logo is used site-wide (the "ELECTRICAL SERVICE" tagline was cropped off per the brand's request). Files in `images/`:
+content/*.json        Editable page text (see Editing content)
+admin/                Site editor (Decap CMS)
+images/               Logo, favicons, social preview image
+netlify.toml          Publish settings, security headers, 404 rules for docs
+robots.txt            Crawler rules
+sitemap.xml           Public page list; update if pages are added or removed
 
-| File | Use |
-|------|-----|
-| `falcon-logo.png` | Full-res navy logo, transparent background (master — use for print/large sizes) |
-| `falcon-logo-white.png` | Full-res white version for dark backgrounds (master) |
-| `falcon-logo-web.png` | Optimized navy logo shown in the header |
-| `falcon-logo-white-web.png` | Optimized white logo shown in the navy footer |
-| `favicon.ico`, `favicon-16/32/48/180.png` | Browser tab + mobile home-screen icons (the eagle mark) |
-| `updatedfalconlogo.jpeg` | Original supplied logo (source, kept for reference) |
+_local-docs/          Working notes. Not committed (see .gitignore).
+```
 
-Note: these are raster (PNG) versions traced/derived from the supplied image. For truck wraps, signage, or large print, get the original **vector** file (`.ai`, `.eps`, or `.svg`) from the logo designer.
+## Editing content
 
-## Viewing it locally
+Text lives in `content/*.json` and is edited at **/admin** (Decap CMS). Changes commit to GitHub and redeploy automatically.
 
-Double-click `index.html` to open in a browser. For a closer-to-production preview, run a quick local server from this folder:
+**Each string exists in two places:** the JSON holds the live value, and the HTML holds the same text as a fallback shown if the JSON fails to load. If you hand-edit a file, change both or the old text reappears when JavaScript is blocked.
+
+**Icons** are named, not pasted. `content/*.json` stores a name like `"clock"`; the SVG paths live in `ICON_PATHS` in `js/cms-content.js`, and the picker list is in `admin/config.yml`. To add one, update both. An unknown name falls back to `bolt`.
+
+**Gallery** is toggled by `show_gallery` in `content/settings.json`, exposed in the editor as "Show the Gallery page". When off, every Gallery link is hidden and `gallery.html` redirects home. It is currently **off** and omitted from `sitemap.xml`.
+
+## Forms
+
+Four forms run on Netlify Forms: `contractor-request`, `electrician-application`, `contact-message`, `meeting-request`. Each needs `data-netlify="true"`, a hidden `form-name` input matching the form's name, and the `bot-field` honeypot. Submissions appear in the Netlify dashboard and are emailed on via Netlify's notification settings.
+
+`js/main.js` must not call `preventDefault` on submit or nothing sends.
+
+## Local preview
 
 ```
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000`.
+Then open `http://localhost:8000`. Opening `index.html` directly also works, but the CMS fetches need a server.
 
-## Going live (hosting)
+## Deploying
 
-Any static host works. Easiest free options:
+Commit to `main`. Netlify rebuilds in under a minute. Failed builds leave the previous version live; the Deploys tab has the log and lets you roll back.
 
-- **Netlify** — drag this whole folder onto app.netlify.com. Bonus: Netlify Forms works automatically (see Forms below).
-- **GitHub Pages** — push the folder to a repo, enable Pages.
-- **Your own domain** — upload these files to any web host's public folder.
+## Known gaps
 
-## Forms (important — currently in demo mode)
-
-The three forms (contractor request, electrician application, contact/meeting) do **not** send anywhere yet. On submit they show a confirmation message but no email goes out. To activate them, pick one:
-
-**Option A — Formspree (works on any host)**
-1. Create a free form at https://formspree.io and copy your form URL (looks like `https://formspree.io/f/abcd1234`).
-2. Open `js/main.js`, find the line `var FORM_ENDPOINT = "";` and put your URL between the quotes.
-3. Set the form to forward to `info@ncfalcon.com` (and `careers@ncfalcon.com` for the application form) in Formspree's settings.
-
-**Option B — Netlify Forms (only if hosted on Netlify)**
-1. Add `netlify` to each `<form ...>` tag, e.g. `<form data-nc-form name="contractor-request" netlify>`.
-2. Deploy. Submissions appear in your Netlify dashboard and can email you.
-
-Resume upload on the electrician form activates automatically once an endpoint is connected (Formspree paid tier or Netlify handle file uploads).
-
-## Hero background video (Home page)
-
-The Home page hero plays a muted, looping background video behind the headline, with a dark navy overlay so the text stays readable. Until a video file is added, it shows `images/hero-poster.svg` (a clean branded gradient) — so it never looks broken.
-
-**To add the video:**
-1. Download a free construction/electrical clip (see links below).
-2. Save it as `images/hero.mp4`. That's it — the hero picks it up automatically.
-
-Tips for a good hero video:
-- Landscape, ~1920×1080, ideally under ~10–15 MB so the page loads fast (trim to 10–20 seconds; it loops).
-- Slow, steady footage reads better than fast cuts behind text.
-- Want a still-image fallback poster instead of the gradient? Save a `hero-poster.jpg` and change the `poster="images/hero-poster.svg"` attribute in `index.html` to `.jpg`.
-
-**Free, license-friendly sources (no attribution required):**
-- Pexels Videos — https://www.pexels.com/search/videos/construction/ and https://www.pexels.com/search/videos/electrician/
-- Coverr — https://coverr.co/s?q=construction
-- Mixkit — https://mixkit.co/free-stock-video/construction/
-
-Download the MP4, rename to `hero.mp4`, drop it in `images/`.
-
-## Adding real photos (gallery)
-
-The brief calls for real photos over stock. To replace the gallery placeholders:
-1. Put image files in an `images/` folder (create it).
-2. In `gallery.html`, replace each `<div class="ph">…</div>` with `<img src="images/your-photo.jpg" alt="description" />`.
-
-Suggested shots: team group photo, crew working, electrical installations, jobsites, ownership, company gatherings, candid culture shots.
-
-## Still to add (from the project brief)
-
-- Final company logo (currently a ⚡ placeholder in the header/footer)
-- Real phone number (placeholder on Contact page)
-- Real photos
-- Contractor & electrician testimonials (sections can be added)
-- Social media links
-- Spanish version (site is built English-first; see below)
-
-## Spanish version (EN/ES)
-
-The brief requires English + Spanish. The site is built English-first with an "ES" toggle already in the nav (currently inactive). When ready, the cleanest approach: duplicate each page into an `/es/` folder with translated copy, and point the toggle at the matching Spanish page.
-
-## Editing tips
-
-- Header and footer are repeated in each HTML file. If you change one (e.g. add the phone number), update it across all six pages.
-- Colors, fonts, and spacing are all controlled by the variables at the top of `css/styles.css`.
-- The amber accent color (`--accent`) is used sparingly for buttons/highlights against the navy.
+- No photography anywhere. Gallery is off until real jobsite photos exist.
+- Spanish version not built. The `ES` toggle in the nav is a placeholder.
+- No testimonials. The home page section stays hidden until `content/testimonials.json` has entries.
+- `admin/config.yml` still needs a DecapBridge site ID before the editor will accept logins.

@@ -6,21 +6,51 @@
   "why": {
     "eyebrow": "Why Work With NC Falcon",
     "title": "We treat our electricians like family",
-    "intro": "We come from the field. We know steady work and fair treatment matter — so that's what we deliver.",
+    "intro": "We come from the field. We know steady work and fair treatment matter.",
     "cards": [
-      { "icon": "📅", "title": "Consistent Work", "text": "We keep our electricians busy with opportunities matched to your skill level and location." },
-      { "icon": "📈", "title": "Professional Growth", "text": "Helper to foreman — we want to see you advance, and we connect you with work that builds your career." },
-      { "icon": "💬", "title": "Direct Communication", "text": "You talk to real people who answer fast and follow through. No runaround." },
-      { "icon": "📍", "title": "Carolinas & Beyond", "text": "Work across NC & SC, with opportunities nationwide and possible per diem depending on the project." },
-      { "icon": "💵", "title": "Fair Pay", "text": "Competitive rates that respect your skills and experience." },
-      { "icon": "🤝", "title": "Relationships First", "text": "We invest in the people we place. You're not a number here." }
+      {
+        "icon": "calendar",
+        "title": "Consistent Work",
+        "text": "We keep our electricians busy with opportunities matched to your skill level and location."
+      },
+      {
+        "icon": "trend-up",
+        "title": "Professional Growth",
+        "text": "We connect you with work that builds your career, from helper to foreman."
+      },
+      {
+        "icon": "chat",
+        "title": "Direct Communication",
+        "text": "You talk to real people who answer fast and follow through."
+      },
+      {
+        "icon": "map-pin",
+        "title": "Carolinas & Beyond",
+        "text": "Work across NC & SC, with opportunities nationwide and possible per diem depending on the project."
+      },
+      {
+        "icon": "banknote",
+        "title": "Fair Pay",
+        "text": "Competitive rates that respect your skills and experience."
+      },
+      {
+        "icon": "users",
+        "title": "Relationships First",
+        "text": "We invest in the people we place. You're not a number here."
+      }
     ]
   },
   "positions": {
     "eyebrow": "Now Hiring",
     "title": "Positions at every level",
     "intro": "Wherever you are in your career, we have opportunities for you.",
-    "items": ["Helpers", "Apprentices", "Journeymen", "Lead Electricians", "Foremen"]
+    "items": [
+      "Helpers",
+      "Apprentices",
+      "Journeymen",
+      "Lead Electricians",
+      "Foremen"
+    ]
   },
   "apply": {
     "eyebrow": "Apply Online",

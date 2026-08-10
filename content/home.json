@@ -1,39 +1,87 @@
 {
   "hero": {
-    "badge": "⚡ Family-Owned · Charlotte, NC",
+    "badge": "Family-Owned · Charlotte, NC",
     "title": "Dependable electrical manpower, when you need it.",
-    "lead": "NC Falcon connects contractors with skilled, evaluated electricians across North & South Carolina — and gives our electricians steady, meaningful work. Relationships first. Response within 24 hours.",
+    "lead": "NC Falcon connects contractors with skilled, evaluated electricians across North and South Carolina, and gives our electricians steady work. We respond within 24 hours.",
     "primary_button": "I Need Electricians",
     "secondary_button": "I'm an Electrician"
   },
   "why": {
     "eyebrow": "Why NC Falcon",
     "title": "Built from real experience in the field",
-    "intro": "With more than 20 years of electrical experience behind us, we know what a jobsite actually needs. We solve manpower challenges fast — and we stand behind every placement.",
+    "intro": "With more than 20 years of electrical experience behind us, we know what a jobsite actually needs. We solve manpower challenges fast.",
     "cards": [
-      { "icon": "⏱", "title": "Fast Response", "text": "Every inquiry gets a response within 24 hours. When you're short-handed, you can't wait — and you won't have to." },
-      { "icon": "🤝", "title": "Direct to Leadership", "text": "You talk to the people who own the business, not a call center. Real communication, real accountability." },
-      { "icon": "✅", "title": "Evaluated Workers", "text": "Every electrician's experience is evaluated before placement and matched to your project's skill requirements." },
-      { "icon": "🔧", "title": "Flexible Staffing", "text": "One helper or a full crew, short-term or long-haul. We scale to your project and your schedule." },
-      { "icon": "📍", "title": "NC & SC Coverage", "text": "Based in Charlotte, serving the Carolinas — and open to opportunities nationwide, with per diem where it fits." },
-      { "icon": "👷", "title": "Competitive Pricing", "text": "Fair rates that keep your project on budget and keep skilled electricians earning a living wage." }
+      {
+        "icon": "clock",
+        "title": "Fast Response",
+        "text": "Every inquiry gets a response within 24 hours."
+      },
+      {
+        "icon": "phone",
+        "title": "Direct to Leadership",
+        "text": "You talk to the people who own the business."
+      },
+      {
+        "icon": "shield-check",
+        "title": "Evaluated Workers",
+        "text": "Our electricians' experience is evaluated before placement and matched to your project's skill requirements."
+      },
+      {
+        "icon": "sliders",
+        "title": "Flexible Staffing",
+        "text": "One helper or a full crew, short-term or long-term. We scale to your project and your schedule."
+      },
+      {
+        "icon": "map-pin",
+        "title": "NC & SC Coverage",
+        "text": "Based in Charlotte, serving the Carolinas. Open to opportunities nationwide, with per diem where it fits."
+      },
+      {
+        "icon": "banknote",
+        "title": "Competitive Pricing",
+        "text": "Fair rates that keep your project on budget and keep skilled electricians earning a living wage."
+      }
     ]
   },
   "stats": [
-    { "number": "20+", "label": "Years of electrical experience" },
-    { "number": "100+", "label": "Electricians placed over time" },
-    { "number": "24 hr", "label": "Response on every inquiry" }
+    {
+      "number": "20+",
+      "label": "Years of electrical experience"
+    },
+    {
+      "number": "100+",
+      "label": "Electricians placed over time"
+    },
+    {
+      "number": "24 hr",
+      "label": "Response on every inquiry"
+    }
   ],
   "staffing": {
     "eyebrow": "Electrical Staffing",
     "title": "Every skill level your job calls for",
-    "lead": "From first-day helpers to seasoned foremen, we recruit through referrals, industry connections, and word of mouth — then match the right person to your project.",
+    "lead": "From helpers to foremen, we recruit through referrals, industry connections, and word of mouth, then match the right person to your project.",
     "positions": [
-      { "name": "Helpers", "description": "reliable hands to keep the crew moving" },
-      { "name": "Apprentices", "description": "developing electricians ready to learn" },
-      { "name": "Journeymen", "description": "licensed, experienced electricians" },
-      { "name": "Lead Electricians", "description": "take ownership of the work" },
-      { "name": "Foremen", "description": "run the crew and keep you on schedule" }
+      {
+        "name": "Helpers",
+        "description": "reliable hands to keep the crew moving"
+      },
+      {
+        "name": "Apprentices",
+        "description": "developing electricians ready to learn"
+      },
+      {
+        "name": "Journeymen",
+        "description": "experienced electricians"
+      },
+      {
+        "name": "Lead Electricians",
+        "description": "take ownership of the work"
+      },
+      {
+        "name": "Foremen",
+        "description": "run the crew and keep you on schedule"
+      }
     ],
     "button": "See how it works →"
   },
@@ -56,10 +104,10 @@
     "eyebrow": "Get Started",
     "title": "Whichever side you're on, we're ready",
     "contractor_title": "For Contractors",
-    "contractor_text": "Need skilled electricians for your project? Tell us what you need and we'll get the right people on site — fast.",
+    "contractor_text": "Tell us what you need and we'll get the right people on site.",
     "contractor_button": "Request Manpower",
     "electrician_title": "For Electricians",
-    "electrician_text": "Looking for steady work and professional growth? Apply online, upload your resume, and let's talk opportunities.",
+    "electrician_text": "Apply online, upload your resume, and we'll be in touch.",
     "electrician_button": "Apply Now"
   }
 }

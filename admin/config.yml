@@ -2,7 +2,7 @@
 # NC Falcon — Site Editor configuration (Decap CMS)
 #
 # ONE PLACEHOLDER LEFT to fill in
-# (full steps in CMS-SETUP-GUIDE.md at the project root):
+# (setup notes are in _local-docs/, not committed):
 #   1. repo — DONE, set to the NC-Falcon-Staffing org repo below
 #   2. YOUR-DECAPBRIDGE-SITE-ID → from a free decapbridge.com account
 # =============================================================
@@ -151,7 +151,12 @@ collections:
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
-                  - { label: "Icon (emoji)", name: "icon", widget: "string" }
+                  - label: "Icon"
+                    name: "icon"
+                    widget: "select"
+                    options: ["bolt", "hard-hat", "sliders", "shield", "shield-check", "clock", "calendar", "users", "chat", "phone", "envelope", "briefcase", "clipboard", "map-pin", "home", "trend-up", "banknote"]
+                    default: "bolt"
+                    hint: "Pick an icon for this card. All icons use the brand colours automatically."
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Text", name: "text", widget: "text" }
           - label: "Statistics Bar"
@@ -242,7 +247,12 @@ collections:
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
-                  - { label: "Icon (emoji)", name: "icon", widget: "string" }
+                  - label: "Icon"
+                    name: "icon"
+                    widget: "select"
+                    options: ["bolt", "hard-hat", "sliders", "shield", "shield-check", "clock", "calendar", "users", "chat", "phone", "envelope", "briefcase", "clipboard", "map-pin", "home", "trend-up", "banknote"]
+                    default: "bolt"
+                    hint: "Pick an icon for this card. All icons use the brand colours automatically."
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Text", name: "text", widget: "text" }
           - label: "What Makes Us Different"
@@ -358,7 +368,12 @@ collections:
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
-                  - { label: "Icon (emoji)", name: "icon", widget: "string" }
+                  - label: "Icon"
+                    name: "icon"
+                    widget: "select"
+                    options: ["bolt", "hard-hat", "sliders", "shield", "shield-check", "clock", "calendar", "users", "chat", "phone", "envelope", "briefcase", "clipboard", "map-pin", "home", "trend-up", "banknote"]
+                    default: "bolt"
+                    hint: "Pick an icon for this card. All icons use the brand colours automatically."
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Text", name: "text", widget: "text" }
           - label: "Now Hiring Section"

@@ -1,7 +1,7 @@
 {
   "page_head": {
     "title": "Skilled electricians, on your jobsite",
-    "intro": "Short-handed? Scaling up? Tell us what your project needs and we'll match the right people — evaluated, reliable, and ready to work."
+    "intro": "Tell us what your project needs and we'll match the right people."
   },
   "how": {
     "eyebrow": "How It Works",
@@ -10,14 +10,14 @@
     "steps": [
       { "title": "Tell us your need", "text": "Skill levels, headcount, location, start date, and duration. The more detail, the better the match." },
       { "title": "We match the crew", "text": "We pull from electricians whose experience we've already evaluated and match them to your requirements." },
-      { "title": "They show up ready", "text": "Your crew arrives on site, on schedule, ready to work — backed by direct communication with our leadership." }
+      { "title": "They show up ready", "text": "Your crew arrives on site, on schedule, ready to work." }
     ]
   },
   "positions": {
     "eyebrow": "Positions We Staff",
     "title": "Every level of the trade",
     "items": ["Helpers", "Apprentices", "Journeymen", "Lead Electricians", "Foremen"],
-    "note": "Need a single position filled or a full crew assembled? We scale to the job — short-term, long-term, and everything between. Per diem arrangements may be available depending on project requirements."
+    "note": "We scale to the job, short-term or long-term. Per diem arrangements may be available depending on project requirements."
   },
   "industries": {
     "title": "Industries we serve",

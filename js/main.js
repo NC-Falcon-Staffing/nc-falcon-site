@@ -20,16 +20,9 @@
     if (href === path) a.classList.add("active");
   });
 
-  /* ------------------------------------------------------------------
-     Form handling.
-     Forms POST natively to Netlify Forms (data-netlify="true" in the
-     markup) and redirect to /thank-you.html on success. Submissions
-     appear in the Netlify dashboard under Forms, and can be emailed on
-     to info@ / careers@ via Netlify's notification settings.
-
-     This script only adds a submitting state and guards against
-     double-clicks; it must NOT preventDefault, or nothing gets sent.
-     ------------------------------------------------------------------ */
+  /* Forms POST natively to Netlify Forms and redirect to /thank-you.html.
+     This only adds a submitting state and guards double-clicks.
+     Do NOT preventDefault here, or submissions stop sending. */
   document.querySelectorAll("form[data-nc-form]").forEach(function (form) {
     var status = form.querySelector(".form-status");
     var submitBtn = form.querySelector('[type="submit"]');

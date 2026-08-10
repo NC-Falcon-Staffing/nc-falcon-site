@@ -26,3 +26,7 @@ npm-debug.log*
 
 # Netlify local build cache
 .netlify/
+
+# Working notes, kept off GitHub. The repo is public, so anything committed
+# here is world-readable regardless of the Netlify rules below.
+_local-docs/
