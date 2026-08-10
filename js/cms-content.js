@@ -46,7 +46,9 @@
     return tr(parent, last);
   }
 
-  function imgSrc(p) { return String(p || "").replace(/^\//, ""); }
+  /* Root-absolute paths. Pages exist at / and /es/, so anything relative
+     resolves differently in each tree and 404s in one of them. */
+  function imgSrc(p) { return "/" + String(p || "").replace(/^\//, ""); }
   function loadJSON(path) {
     return fetch(path, { cache: "no-store" })
       .then(function (r) { return r.ok ? r.json() : null; })
@@ -162,8 +164,8 @@
         var li = a.closest("li");
         (li || a).style.display = "none";
       });
-      if (document.body.getAttribute("data-page") === "gallery") {
-        window.location.replace("index.html");
+      if (page === "gallery") {
+        window.location.replace(IS_ES ? "/es/index.html" : "/index.html");
         return;
       }
     }
@@ -258,10 +260,10 @@
   }
 
   // ---------- boot ----------
-  var jobs = [loadJSON("content/settings.json").then(applySettings)];
+  var jobs = [loadJSON("/content/settings.json").then(applySettings)];
 
   if (page) {
-    jobs.push(loadJSON("content/" + page + ".json").then(function (data) {
+    jobs.push(loadJSON("/content/" + page + ".json").then(function (data) {
       if (!data) return;
       bindText(data);
       bindLists(data);
@@ -269,6 +271,6 @@
     }));
   }
   if (page === "home") {
-    jobs.push(loadJSON("content/testimonials.json").then(applyTestimonials));
+    jobs.push(loadJSON("/content/testimonials.json").then(applyTestimonials));
   }
 })();

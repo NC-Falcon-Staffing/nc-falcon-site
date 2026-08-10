@@ -41,6 +41,8 @@ Text lives in `content/*.json` and is edited at **/admin** (Decap CMS). Changes 
 
 **Adding a page** means adding it to both trees, with matching `hreflang` tags and two `sitemap.xml` entries.
 
+**Paths must be root-absolute** (`/content/...`, `/css/...`). Pages exist at both `/` and `/es/`, so anything relative resolves to `/es/content/...` on a Spanish page and 404s, which silently disables the whole CMS layer there.
+
 **Icons** are named, not pasted. `content/*.json` stores a name like `"clock"`; the SVG paths live in `ICON_PATHS` in `js/cms-content.js`, and the picker list is in `admin/config.yml`. To add one, update both. An unknown name falls back to `bolt`.
 
 **Gallery** is toggled by `show_gallery` in `content/settings.json`, exposed in the editor as "Show the Gallery page". When off, every Gallery link is hidden and `gallery.html` redirects home. It is currently **off** and omitted from `sitemap.xml`.
