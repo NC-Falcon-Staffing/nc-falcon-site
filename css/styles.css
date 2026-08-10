@@ -120,13 +120,18 @@ p:last-child { margin-bottom: 0; }
   letter-spacing: 0.04em; text-transform: uppercase; line-height: 1.15;
   padding-left: 0.7rem; margin-left: 0.15rem;
   border-left: 2px solid var(--gray-200);
+  white-space: nowrap;
 }
+.brand { flex: 0 0 auto; }
 @media (max-width: 420px) { .brand .brand-txt { display: none; } }
 
 .nav-links { display: flex; align-items: center; gap: 0.35rem; list-style: none; }
 .nav-links a {
   color: var(--gray-700); font-weight: 600; font-size: 0.97rem;
   padding: 0.5rem 0.85rem; border-radius: 6px;
+  /* Keep every label on one line. Spanish labels run longer than English,
+     and without this the bar wraps to two rows on mid-width screens. */
+  white-space: nowrap;
 }
 .nav-links a:hover { color: var(--navy); background: var(--gray-100); text-decoration: none; }
 .nav-links a.active { color: var(--navy); }
@@ -347,6 +352,15 @@ p:last-child { margin-bottom: 0; }
     background: linear-gradient(rgba(15,37,66,0.62), rgba(15,37,66,0.82));
   }
 }
+/* Narrow gutters before the mobile menu appears, so the longest label set
+   (Spanish) still fits on one row. */
+@media (max-width: 1200px) {
+  .nav-links { gap: 0.1rem; }
+  .nav-links a { padding: 0.5rem 0.6rem; font-size: 0.92rem; }
+  .brand .logo-img { height: 46px; }
+  .brand .brand-txt { font-size: 0.82rem; }
+}
+
 @media (max-width: 900px) {
   .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); }
   .split, .dual { grid-template-columns: 1fr; gap: 2rem; }
