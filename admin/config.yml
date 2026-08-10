@@ -1,24 +1,38 @@
 # =============================================================
 # NC Falcon — Site Editor configuration (Decap CMS)
-#
-# ONE PLACEHOLDER LEFT to fill in
-# (setup notes are in _local-docs/, not committed):
-#   1. repo — DONE, set to the NC-Falcon-Staffing org repo below
-#   2. YOUR-DECAPBRIDGE-SITE-ID → from a free decapbridge.com account
+# Auth: DecapBridge (PKCE). Editors log in at /admin with Google
+# or a password; DecapBridge commits to GitHub on their behalf.
 # =============================================================
 
 backend:
   name: git-gateway
   repo: NC-Falcon-Staffing/nc-falcon-site
   branch: main
-  identity_url: https://auth.decapbridge.com/sites/YOUR-DECAPBRIDGE-SITE-ID
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/8c3bd649-71e3-457b-945e-028010c8a069/pkce
+  auth_token_endpoint: /sites/8c3bd649-71e3-457b-945e-028010c8a069/token
   gateway_url: https://gateway.decapbridge.com
+  # Commits record who made the change
   commit_messages:
-    create: Create {{collection}} "{{slug}}" — {{author-name}} via site editor
-    update: Update {{collection}} "{{slug}}" — {{author-name}} via site editor
-    delete: Delete {{collection}} "{{slug}}" — {{author-name}} via site editor
-    uploadMedia: Upload "{{path}}" — {{author-name}} via site editor
-    deleteMedia: Delete "{{path}}" — {{author-name}} via site editor
+    create: 'Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via site editor'
+    update: 'Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via site editor'
+    delete: 'Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via site editor'
+    uploadMedia: 'Upload "{{path}}" - {{author-name}} <{{author-login}}> via site editor'
+    deleteMedia: 'Delete "{{path}}" - {{author-name}} <{{author-login}}> via site editor'
+
+# Maps the PKCE login details onto the editor's profile
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+# Shown on the login screen and in the editor header
+logo_url: /images/falcon-logo-web.png
+
+# Puts a "View site" link in the editor
+site_url: https://ncfalconstaffing.com
 
 # Where uploaded photos are stored
 media_folder: "images/uploads"

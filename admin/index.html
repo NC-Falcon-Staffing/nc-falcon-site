@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>NC Falcon — Site Editor</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png" />
 </head>
 <body>
   <!-- Decap CMS: the admin panel loads entirely from this script. -->
-  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- Pinned deliberately. A floating range (^3.0.0) means any release lands
+       on the live editor unannounced. PKCE login needs >= 3.8.3.
+       To upgrade: bump this number, deploy, then log in and confirm it works. -->
+  <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
 </body>
 </html>
