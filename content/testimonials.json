@@ -1,7 +1,9 @@
 {
   "section": {
     "eyebrow": "What People Say",
-    "title": "Trusted by contractors and electricians"
+    "eyebrow_es": "What People Say",
+    "title": "Trusted by contractors and electricians",
+    "title_es": "Trusted by contractors and electricians"
   },
   "items": []
 }

@@ -20,7 +20,8 @@ css/styles.css        All styling. Colours and spacing are variables at the top.
 js/main.js            Mobile nav, active link, form submit state
 js/cms-content.js     Loads /content JSON into the pages; holds the icon set
 
-content/*.json        Editable page text (see Editing content)
+content/*.json        Editable page text, English + Spanish (see Editing content)
+es/                   Spanish page set. Same structure, data-lang="es".
 admin/                Site editor (Decap CMS)
 images/               Logo, favicons, social preview image
 netlify.toml          Publish settings, security headers, 404 rules for docs
@@ -35,6 +36,10 @@ _local-docs/          Working notes. Not committed (see .gitignore).
 Text lives in `content/*.json` and is edited at **/admin** (Decap CMS). Changes commit to GitHub and redeploy automatically.
 
 **Each string exists in two places:** the JSON holds the live value, and the HTML holds the same text as a fallback shown if the JSON fails to load. If you hand-edit a file, change both or the old text reappears when JavaScript is blocked.
+
+**Two languages.** Every text field has an English key and a Spanish twin (`title` and `title_es`). Pages under `/es/` carry `data-lang="es"` and read the `_es` value, falling back to English when it's blank, so nothing is ever empty. Nav, form labels and page titles are deliberately left in English on both trees for now.
+
+**Adding a page** means adding it to both trees, with matching `hreflang` tags and two `sitemap.xml` entries.
 
 **Icons** are named, not pasted. `content/*.json` stores a name like `"clock"`; the SVG paths live in `ICON_PATHS` in `js/cms-content.js`, and the picker list is in `admin/config.yml`. To add one, update both. An unknown name falls back to `bolt`.
 

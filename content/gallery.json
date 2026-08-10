@@ -1,13 +1,19 @@
 {
   "page_head": {
     "title": "Our crews, our work, our culture",
-    "intro": "Photos of our crews and jobsites are on the way."
+    "title_es": "Our crews, our work, our culture",
+    "intro": "Photos of our crews and jobsites are on the way.",
+    "intro_es": "Photos of our crews and jobsites are on the way."
   },
   "photos": [],
   "cta": {
     "title": "Want to be part of the picture?",
+    "title_es": "Want to be part of the picture?",
     "text": "Whether you're hiring electricians or looking for steady work, NC Falcon is ready.",
+    "text_es": "Whether you're hiring electricians or looking for steady work, NC Falcon is ready.",
     "primary_button": "Request Manpower",
-    "secondary_button": "Apply for Work"
+    "primary_button_es": "Request Manpower",
+    "secondary_button": "Apply for Work",
+    "secondary_button_es": "Apply for Work"
   }
 }

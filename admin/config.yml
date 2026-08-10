@@ -44,8 +44,11 @@ collections:
           - { label: "Careers Email", name: "email_careers", widget: "string" }
           - { label: "Phone", name: "phone", widget: "string", hint: "Shown on the Contact page. Example: (704) 555-0123" }
           - { label: "Location", name: "location", widget: "string" }
+          - { label: "Location (Español)", name: "location_es", widget: "string", required: false }
           - { label: "Service Area", name: "service_area", widget: "string" }
+          - { label: "Service Area (Español)", name: "service_area_es", widget: "string", required: false }
           - { label: "Response Time", name: "response_time", widget: "string" }
+          - { label: "Response Time (Español)", name: "response_time_es", widget: "string", required: false }
           - label: "Show the Gallery page"
             name: "show_gallery"
             widget: "boolean"
@@ -53,7 +56,9 @@ collections:
             required: false
             hint: "Leave OFF until you have real jobsite photos. When OFF, the Gallery link is hidden from the menu and footer everywhere on the site. Turn it ON once you have added photos below."
           - { label: "Footer Description", name: "footer_description", widget: "text" }
+          - { label: "Footer Description (Español)", name: "footer_description_es", widget: "text", required: false }
           - { label: "Footer Motto", name: "footer_motto", widget: "string" }
+          - { label: "Footer Motto (Español)", name: "footer_motto_es", widget: "string", required: false }
 
   # ----------------------------------------------------------
   # GALLERY
@@ -71,7 +76,9 @@ collections:
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }
           - label: "Photos"
             name: "photos"
             widget: "list"
@@ -80,15 +87,20 @@ collections:
             fields:
               - { label: "Photo", name: "image", widget: "image" }
               - { label: "Caption", name: "caption", widget: "string" }
+              - { label: "Caption (Español)", name: "caption_es", widget: "string", required: false }
           - label: "Bottom Banner"
             name: "cta"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text (Español)", name: "text_es", widget: "text", required: false }
               - { label: "Orange Button Label", name: "primary_button", widget: "string" }
+              - { label: "Orange Button Label (Español)", name: "primary_button_es", widget: "string", required: false }
               - { label: "Outline Button Label", name: "secondary_button", widget: "string" }
+              - { label: "Outline Button Label (Español)", name: "secondary_button_es", widget: "string", required: false }
 
   # ----------------------------------------------------------
   # TESTIMONIALS
@@ -107,7 +119,9 @@ collections:
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
           - label: "Testimonials"
             name: "items"
             widget: "list"
@@ -115,8 +129,11 @@ collections:
             hint: "The home page shows these in order. Delete all of them to hide the whole section."
             fields:
               - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Quote (Español)", name: "quote_es", widget: "text", required: false }
               - { label: "Name", name: "author", widget: "string" }
+              - { label: "Name (Español)", name: "author_es", widget: "string", required: false }
               - { label: "Role / Company", name: "role", widget: "string", required: false, hint: "Example: Project Manager, ABC Electric" }
+              - { label: "Role / Company (Español)", name: "role_es", widget: "string", required: false }
 
   # ----------------------------------------------------------
   # PAGES
@@ -134,18 +151,26 @@ collections:
             widget: "object"
             fields:
               - { label: "Small Badge", name: "badge", widget: "string" }
+              - { label: "Small Badge (Español)", name: "badge_es", widget: "string", required: false }
               - { label: "Main Headline", name: "title", widget: "string" }
+              - { label: "Main Headline (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro Paragraph", name: "lead", widget: "text" }
+              - { label: "Intro Paragraph (Español)", name: "lead_es", widget: "text", required: false }
               - { label: "Orange Button Label", name: "primary_button", widget: "string" }
+              - { label: "Orange Button Label (Español)", name: "primary_button_es", widget: "string", required: false }
               - { label: "Outline Button Label", name: "secondary_button", widget: "string" }
+              - { label: "Outline Button Label (Español)", name: "secondary_button_es", widget: "string", required: false }
           - label: "Why NC Falcon Section"
             name: "why"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }
               - label: "Cards"
                 name: "cards"
                 widget: "list"
@@ -158,7 +183,9 @@ collections:
                     default: "bolt"
                     hint: "Pick an icon for this card. All icons use the brand colours automatically."
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
                   - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Text (Español)", name: "text_es", widget: "text", required: false }
           - label: "Statistics Bar"
             name: "stats"
             widget: "list"
@@ -166,43 +193,61 @@ collections:
             summary: "{{fields.number}} — {{fields.label}}"
             fields:
               - { label: "Number", name: "number", widget: "string" }
+              - { label: "Number (Español)", name: "number_es", widget: "string", required: false }
               - { label: "Label", name: "label", widget: "string" }
+              - { label: "Label (Español)", name: "label_es", widget: "string", required: false }
           - label: "Staffing Section"
             name: "staffing"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "lead", widget: "text" }
+              - { label: "Intro (Español)", name: "lead_es", widget: "text", required: false }
               - label: "Positions"
                 name: "positions"
                 widget: "list"
                 summary: "{{fields.name}}"
                 fields:
                   - { label: "Position", name: "name", widget: "string" }
+                  - { label: "Position (Español)", name: "name_es", widget: "string", required: false }
                   - { label: "Short Description", name: "description", widget: "string" }
+                  - { label: "Short Description (Español)", name: "description_es", widget: "string", required: false }
               - { label: "Button Label", name: "button", widget: "string" }
+              - { label: "Button Label (Español)", name: "button_es", widget: "string", required: false }
           - label: "Industries Box"
             name: "industries"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Industries", name: "items", widget: "list", field: { label: "Industry", name: "item", widget: "string" } }
+              - { label: "Industries (Español)", name: "items_es", widget: "list", required: false, field: { label: "Industria", name: "item", widget: "string" } }
           - label: "Bottom Call-to-Action"
             name: "cta"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Contractor Panel Title", name: "contractor_title", widget: "string" }
+              - { label: "Contractor Panel Title (Español)", name: "contractor_title_es", widget: "string", required: false }
               - { label: "Contractor Panel Text", name: "contractor_text", widget: "text" }
+              - { label: "Contractor Panel Text (Español)", name: "contractor_text_es", widget: "text", required: false }
               - { label: "Contractor Button", name: "contractor_button", widget: "string" }
+              - { label: "Contractor Button (Español)", name: "contractor_button_es", widget: "string", required: false }
               - { label: "Electrician Panel Title", name: "electrician_title", widget: "string" }
+              - { label: "Electrician Panel Title (Español)", name: "electrician_title_es", widget: "string", required: false }
               - { label: "Electrician Panel Text", name: "electrician_text", widget: "text" }
+              - { label: "Electrician Panel Text (Español)", name: "electrician_text_es", widget: "text", required: false }
               - { label: "Electrician Button", name: "electrician_button", widget: "string" }
+              - { label: "Electrician Button (Español)", name: "electrician_button_es", widget: "string", required: false }
 
       - name: "about"
         label: "About Page"
@@ -213,35 +258,45 @@ collections:
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }
           - label: "Mission Section"
             name: "mission"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Lead Paragraph", name: "lead", widget: "text" }
+              - { label: "Lead Paragraph (Español)", name: "lead_es", widget: "text", required: false }
               - { label: "Second Paragraph", name: "text", widget: "text" }
+              - { label: "Second Paragraph (Español)", name: "text_es", widget: "text", required: false }
           - label: "Our Story Box"
             name: "story"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - label: "Paragraphs"
                 name: "paragraphs"
                 widget: "list"
                 summary: "{{fields.text}}"
                 fields:
                   - { label: "Paragraph", name: "text", widget: "text" }
+                  - { label: "Paragraph (Español)", name: "text_es", widget: "text", required: false }
           - label: "Core Values"
             name: "values"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - label: "Value Cards"
                 name: "cards"
                 widget: "list"
@@ -254,46 +309,62 @@ collections:
                     default: "bolt"
                     hint: "Pick an icon for this card. All icons use the brand colours automatically."
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
                   - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Text (Español)", name: "text_es", widget: "text", required: false }
           - label: "What Makes Us Different"
             name: "difference"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Box Title", name: "box_title", widget: "string" }
+              - { label: "Box Title (Español)", name: "box_title_es", widget: "string", required: false }
               - label: "Checklist Points"
                 name: "points"
                 widget: "list"
                 summary: "{{fields.text}}"
                 fields:
                   - { label: "Point", name: "text", widget: "string" }
+                  - { label: "Point (Español)", name: "text_es", widget: "string", required: false }
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Lead Paragraph", name: "lead", widget: "text" }
+              - { label: "Lead Paragraph (Español)", name: "lead_es", widget: "text", required: false }
               - { label: "Second Paragraph", name: "text", widget: "text" }
+              - { label: "Second Paragraph (Español)", name: "text_es", widget: "text", required: false }
           - label: "Team Section"
             name: "team"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - label: "Team Cards"
                 name: "members"
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
                   - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Text (Español)", name: "text_es", widget: "text", required: false }
           - label: "Looking Ahead Section"
             name: "future"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Text", name: "text", widget: "text" }
+              - { label: "Text (Español)", name: "text_es", widget: "text", required: false }
               - { label: "Future Trades", name: "trades", widget: "list", field: { label: "Trade", name: "item", widget: "string" } }
+              - { label: "Future Trades (Español)", name: "trades_es", widget: "list", required: false, field: { label: "Oficio", name: "item", widget: "string" } }
 
       - name: "contractors"
         label: "For Contractors Page"
@@ -304,46 +375,62 @@ collections:
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }
           - label: "How It Works"
             name: "how"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }
               - label: "Steps"
                 name: "steps"
                 widget: "list"
                 summary: "{{fields.title}}"
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
                   - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Text (Español)", name: "text_es", widget: "text", required: false }
           - label: "Positions We Staff"
             name: "positions"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Positions", name: "items", widget: "list", field: { label: "Position", name: "item", widget: "string" } }
+              - { label: "Positions (Español)", name: "items_es", widget: "list", required: false, field: { label: "Puesto", name: "item", widget: "string" } }
               - { label: "Note Below List", name: "note", widget: "text" }
+              - { label: "Note Below List (Español)", name: "note_es", widget: "text", required: false }
           - label: "Industries Box"
             name: "industries"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Industries", name: "items", widget: "list", field: { label: "Industry", name: "item", widget: "string" } }
+              - { label: "Industries (Español)", name: "items_es", widget: "list", required: false, field: { label: "Industria", name: "item", widget: "string" } }
           - label: "Request Form Section"
             name: "request"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Notice Banner", name: "notice", widget: "string" }
+              - { label: "Notice Banner (Español)", name: "notice_es", widget: "string", required: false }
 
       - name: "electricians"
         label: "For Electricians Page"
@@ -354,15 +441,20 @@ collections:
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }
           - label: "Why Work With Us"
             name: "why"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }
               - label: "Cards"
                 name: "cards"
                 widget: "list"
@@ -375,24 +467,33 @@ collections:
                     default: "bolt"
                     hint: "Pick an icon for this card. All icons use the brand colours automatically."
                   - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
                   - { label: "Text", name: "text", widget: "text" }
+                  - { label: "Text (Español)", name: "text_es", widget: "text", required: false }
           - label: "Now Hiring Section"
             name: "positions"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }
               - { label: "Positions", name: "items", widget: "list", field: { label: "Position", name: "item", widget: "string" } }
+              - { label: "Positions (Español)", name: "items_es", widget: "list", required: false, field: { label: "Puesto", name: "item", widget: "string" } }
           - label: "Application Form Section"
             name: "apply"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Notice Banner", name: "notice", widget: "string" }
+              - { label: "Notice Banner (Español)", name: "notice_es", widget: "string", required: false }
 
       - name: "contact"
         label: "Contact Page"
@@ -403,27 +504,37 @@ collections:
             widget: "object"
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }
           - label: "Contact Info Column"
             name: "info"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Lead Paragraph", name: "lead", widget: "text" }
+              - { label: "Lead Paragraph (Español)", name: "lead_es", widget: "text", required: false }
           - label: "Message Form"
             name: "form"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Notice Banner", name: "notice", widget: "string" }
+              - { label: "Notice Banner (Español)", name: "notice_es", widget: "string", required: false }
           - label: "Meeting Request Section"
             name: "meeting"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Small Label", name: "eyebrow", widget: "string" }
+              - { label: "Small Label (Español)", name: "eyebrow_es", widget: "string", required: false }
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Intro (Español)", name: "intro_es", widget: "text", required: false }

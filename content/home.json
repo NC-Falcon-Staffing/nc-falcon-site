@@ -1,93 +1,146 @@
 {
   "hero": {
     "badge": "Family-Owned · Charlotte, NC",
+    "badge_es": "Family-Owned · Charlotte, NC",
     "title": "Dependable electrical manpower, when you need it.",
+    "title_es": "Dependable electrical manpower, when you need it.",
     "lead": "NC Falcon connects contractors with skilled, evaluated electricians across North and South Carolina, and gives our electricians steady work. We respond within 24 hours.",
+    "lead_es": "NC Falcon connects contractors with skilled, evaluated electricians across North and South Carolina, and gives our electricians steady work. We respond within 24 hours.",
     "primary_button": "I Need Electricians",
-    "secondary_button": "I'm an Electrician"
+    "primary_button_es": "I Need Electricians",
+    "secondary_button": "I'm an Electrician",
+    "secondary_button_es": "I'm an Electrician"
   },
   "why": {
     "eyebrow": "Why NC Falcon",
+    "eyebrow_es": "Why NC Falcon",
     "title": "Built from real experience in the field",
+    "title_es": "Built from real experience in the field",
     "intro": "With more than 20 years of electrical experience behind us, we know what a jobsite actually needs. We solve manpower challenges fast.",
+    "intro_es": "With more than 20 years of electrical experience behind us, we know what a jobsite actually needs. We solve manpower challenges fast.",
     "cards": [
       {
         "icon": "clock",
         "title": "Fast Response",
-        "text": "Every inquiry gets a response within 24 hours."
+        "title_es": "Fast Response",
+        "text": "Every inquiry gets a response within 24 hours.",
+        "text_es": "Every inquiry gets a response within 24 hours."
       },
       {
         "icon": "phone",
         "title": "Direct to Leadership",
-        "text": "You talk to the people who own the business."
+        "title_es": "Direct to Leadership",
+        "text": "You talk to the people who own the business.",
+        "text_es": "You talk to the people who own the business."
       },
       {
         "icon": "shield-check",
         "title": "Evaluated Workers",
-        "text": "Our electricians' experience is evaluated before placement and matched to your project's skill requirements."
+        "title_es": "Evaluated Workers",
+        "text": "Our electricians' experience is evaluated before placement and matched to your project's skill requirements.",
+        "text_es": "Our electricians' experience is evaluated before placement and matched to your project's skill requirements."
       },
       {
         "icon": "sliders",
         "title": "Flexible Staffing",
-        "text": "One helper or a full crew, short-term or long-term. We scale to your project and your schedule."
+        "title_es": "Flexible Staffing",
+        "text": "One helper or a full crew, short-term or long-term. We scale to your project and your schedule.",
+        "text_es": "One helper or a full crew, short-term or long-term. We scale to your project and your schedule."
       },
       {
         "icon": "map-pin",
         "title": "NC & SC Coverage",
-        "text": "Based in Charlotte, serving the Carolinas. Open to opportunities nationwide, with per diem where it fits."
+        "title_es": "NC & SC Coverage",
+        "text": "Based in Charlotte, serving the Carolinas. Open to opportunities nationwide, with per diem where it fits.",
+        "text_es": "Based in Charlotte, serving the Carolinas. Open to opportunities nationwide, with per diem where it fits."
       },
       {
         "icon": "banknote",
         "title": "Competitive Pricing",
-        "text": "Fair rates that keep your project on budget and keep skilled electricians earning a living wage."
+        "title_es": "Competitive Pricing",
+        "text": "Fair rates that keep your project on budget and keep skilled electricians earning a living wage.",
+        "text_es": "Fair rates that keep your project on budget and keep skilled electricians earning a living wage."
       }
     ]
   },
   "stats": [
     {
       "number": "20+",
-      "label": "Years of electrical experience"
+      "number_es": "20+",
+      "label": "Years of electrical experience",
+      "label_es": "Years of electrical experience"
     },
     {
       "number": "100+",
-      "label": "Electricians placed over time"
+      "number_es": "100+",
+      "label": "Electricians placed over time",
+      "label_es": "Electricians placed over time"
     },
     {
       "number": "24 hr",
-      "label": "Response on every inquiry"
+      "number_es": "24 hr",
+      "label": "Response on every inquiry",
+      "label_es": "Response on every inquiry"
     }
   ],
   "staffing": {
     "eyebrow": "Electrical Staffing",
+    "eyebrow_es": "Electrical Staffing",
     "title": "Every skill level your job calls for",
+    "title_es": "Every skill level your job calls for",
     "lead": "From helpers to foremen, we recruit through referrals, industry connections, and word of mouth, then match the right person to your project.",
+    "lead_es": "From helpers to foremen, we recruit through referrals, industry connections, and word of mouth, then match the right person to your project.",
     "positions": [
       {
         "name": "Helpers",
-        "description": "reliable hands to keep the crew moving"
+        "name_es": "Helpers",
+        "description": "reliable hands to keep the crew moving",
+        "description_es": "reliable hands to keep the crew moving"
       },
       {
         "name": "Apprentices",
-        "description": "developing electricians ready to learn"
+        "name_es": "Apprentices",
+        "description": "developing electricians ready to learn",
+        "description_es": "developing electricians ready to learn"
       },
       {
         "name": "Journeymen",
-        "description": "experienced electricians"
+        "name_es": "Journeymen",
+        "description": "experienced electricians",
+        "description_es": "experienced electricians"
       },
       {
         "name": "Lead Electricians",
-        "description": "take ownership of the work"
+        "name_es": "Lead Electricians",
+        "description": "take ownership of the work",
+        "description_es": "take ownership of the work"
       },
       {
         "name": "Foremen",
-        "description": "run the crew and keep you on schedule"
+        "name_es": "Foremen",
+        "description": "run the crew and keep you on schedule",
+        "description_es": "run the crew and keep you on schedule"
       }
     ],
-    "button": "See how it works →"
+    "button": "See how it works →",
+    "button_es": "See how it works →"
   },
   "industries": {
     "title": "Industries we serve",
+    "title_es": "Industries we serve",
     "items": [
+      "Commercial Construction",
+      "Industrial Facilities",
+      "Manufacturing",
+      "Healthcare",
+      "Educational Facilities",
+      "Hospitality",
+      "Warehousing & Distribution",
+      "Multi-Family Housing",
+      "Residential",
+      "Service & Maintenance"
+    ],
+    "items_es": [
       "Commercial Construction",
       "Industrial Facilities",
       "Manufacturing",
@@ -102,12 +155,20 @@
   },
   "cta": {
     "eyebrow": "Get Started",
+    "eyebrow_es": "Get Started",
     "title": "Whichever side you're on, we're ready",
+    "title_es": "Whichever side you're on, we're ready",
     "contractor_title": "For Contractors",
+    "contractor_title_es": "For Contractors",
     "contractor_text": "Tell us what you need and we'll get the right people on site.",
+    "contractor_text_es": "Tell us what you need and we'll get the right people on site.",
     "contractor_button": "Request Manpower",
+    "contractor_button_es": "Request Manpower",
     "electrician_title": "For Electricians",
+    "electrician_title_es": "For Electricians",
     "electrician_text": "Apply online, upload your resume, and we'll be in touch.",
-    "electrician_button": "Apply Now"
+    "electrician_text_es": "Apply online, upload your resume, and we'll be in touch.",
+    "electrician_button": "Apply Now",
+    "electrician_button_es": "Apply Now"
   }
 }

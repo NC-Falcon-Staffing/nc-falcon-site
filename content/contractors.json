@@ -1,27 +1,76 @@
 {
   "page_head": {
     "title": "Skilled electricians, on your jobsite",
-    "intro": "Tell us what your project needs and we'll match the right people."
+    "title_es": "Skilled electricians, on your jobsite",
+    "intro": "Tell us what your project needs and we'll match the right people.",
+    "intro_es": "Tell us what your project needs and we'll match the right people."
   },
   "how": {
     "eyebrow": "How It Works",
+    "eyebrow_es": "How It Works",
     "title": "Manpower without the headache",
+    "title_es": "Manpower without the headache",
     "intro": "Call us, email us, or submit the form below. We respond within 24 hours and get to work matching your project.",
+    "intro_es": "Call us, email us, or submit the form below. We respond within 24 hours and get to work matching your project.",
     "steps": [
-      { "title": "Tell us your need", "text": "Skill levels, headcount, location, start date, and duration. The more detail, the better the match." },
-      { "title": "We match the crew", "text": "We pull from electricians whose experience we've already evaluated and match them to your requirements." },
-      { "title": "They show up ready", "text": "Your crew arrives on site, on schedule, ready to work." }
+      {
+        "title": "Tell us your need",
+        "title_es": "Tell us your need",
+        "text": "Skill levels, headcount, location, start date, and duration. The more detail, the better the match.",
+        "text_es": "Skill levels, headcount, location, start date, and duration. The more detail, the better the match."
+      },
+      {
+        "title": "We match the crew",
+        "title_es": "We match the crew",
+        "text": "We pull from electricians whose experience we've already evaluated and match them to your requirements.",
+        "text_es": "We pull from electricians whose experience we've already evaluated and match them to your requirements."
+      },
+      {
+        "title": "They show up ready",
+        "title_es": "They show up ready",
+        "text": "Your crew arrives on site, on schedule, ready to work.",
+        "text_es": "Your crew arrives on site, on schedule, ready to work."
+      }
     ]
   },
   "positions": {
     "eyebrow": "Positions We Staff",
+    "eyebrow_es": "Positions We Staff",
     "title": "Every level of the trade",
-    "items": ["Helpers", "Apprentices", "Journeymen", "Lead Electricians", "Foremen"],
-    "note": "We scale to the job, short-term or long-term. Per diem arrangements may be available depending on project requirements."
+    "title_es": "Every level of the trade",
+    "items": [
+      "Helpers",
+      "Apprentices",
+      "Journeymen",
+      "Lead Electricians",
+      "Foremen"
+    ],
+    "items_es": [
+      "Helpers",
+      "Apprentices",
+      "Journeymen",
+      "Lead Electricians",
+      "Foremen"
+    ],
+    "note": "We scale to the job, short-term or long-term. Per diem arrangements may be available depending on project requirements.",
+    "note_es": "We scale to the job, short-term or long-term. Per diem arrangements may be available depending on project requirements."
   },
   "industries": {
     "title": "Industries we serve",
+    "title_es": "Industries we serve",
     "items": [
+      "Commercial Construction",
+      "Industrial Facilities",
+      "Manufacturing",
+      "Healthcare",
+      "Educational Facilities",
+      "Hospitality",
+      "Warehousing & Distribution",
+      "Multi-Family Housing",
+      "Residential",
+      "Service & Maintenance"
+    ],
+    "items_es": [
       "Commercial Construction",
       "Industrial Facilities",
       "Manufacturing",
@@ -36,7 +85,10 @@
   },
   "request": {
     "eyebrow": "Request Manpower",
+    "eyebrow_es": "Request Manpower",
     "title": "Tell us what your project needs",
-    "notice": "All inquiries receive a reply within 24 hours."
+    "title_es": "Tell us what your project needs",
+    "notice": "All inquiries receive a reply within 24 hours.",
+    "notice_es": "All inquiries receive a reply within 24 hours."
   }
 }

@@ -1,20 +1,30 @@
 {
   "page_head": {
     "title": "Let's talk",
-    "intro": "Call, email, or send a message. However you reach us, you'll hear back within 24 hours."
+    "title_es": "Let's talk",
+    "intro": "Call, email, or send a message. However you reach us, you'll hear back within 24 hours.",
+    "intro_es": "Call, email, or send a message. However you reach us, you'll hear back within 24 hours."
   },
   "info": {
     "eyebrow": "Get In Touch",
+    "eyebrow_es": "Get In Touch",
     "title": "Contact information",
-    "lead": "Based in Charlotte, North Carolina. Serving NC and SC, and open to opportunities nationwide."
+    "title_es": "Contact information",
+    "lead": "Based in Charlotte, North Carolina. Serving NC and SC, and open to opportunities nationwide.",
+    "lead_es": "Based in Charlotte, North Carolina. Serving NC and SC, and open to opportunities nationwide."
   },
   "form": {
     "title": "Send us a message",
-    "notice": "We reply to every inquiry within 24 hours."
+    "title_es": "Send us a message",
+    "notice": "We reply to every inquiry within 24 hours.",
+    "notice_es": "We reply to every inquiry within 24 hours."
   },
   "meeting": {
     "eyebrow": "Schedule a Meeting",
+    "eyebrow_es": "Schedule a Meeting",
     "title": "Want to sit down and talk it through?",
-    "intro": "Tell us when works and what you'd like to discuss. We'll confirm a time that fits."
+    "title_es": "Want to sit down and talk it through?",
+    "intro": "Tell us when works and what you'd like to discuss. We'll confirm a time that fits.",
+    "intro_es": "Tell us when works and what you'd like to discuss. We'll confirm a time that fits."
   }
 }

@@ -13,11 +13,15 @@
     });
   }
 
-  // Mark current page link active
-  var path = window.location.pathname.split("/").pop() || "index.html";
+  // Mark current page link active. Compare filenames, because links are
+  // relative in the English tree ("about.html") and absolute in the Spanish
+  // one ("/es/about.html").
+  var here = window.location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-links a").forEach(function (a) {
-    var href = a.getAttribute("href");
-    if (href === path) a.classList.add("active");
+    var href = a.getAttribute("href") || "";
+    if (href.charAt(0) === "#" || /^(https?:|mailto:|tel:)/.test(href)) return;
+    var target = href.split("#")[0].split("/").pop() || "index.html";
+    if (target === here) a.classList.add("active");
   });
 
   /* Forms POST natively to Netlify Forms and redirect to /thank-you.html.

@@ -7,17 +7,45 @@
 
   var page = document.body.getAttribute("data-page");
 
+  /* Language. Spanish pages live in /es/ and carry data-lang="es".
+     Every text field in /content has an English key and a Spanish twin
+     ("title" and "title_es"). On a Spanish page we read the _es value and
+     fall back to English when it is empty, so the page is never blank while
+     translation is still in progress. */
+  var LANG = document.body.getAttribute("data-lang") === "es" ? "es" : "en";
+  var IS_ES = LANG === "es";
+
   // ---------- helpers ----------
   function esc(s) {
     return String(s == null ? "" : s)
       .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
   }
+
+  /* Pick the right language off an object. Pass the object and the English
+     key; on Spanish pages this tries key_es first. Empty or missing Spanish
+     falls through to English. */
+  function tr(obj, key) {
+    if (!obj) return undefined;
+    if (IS_ES) {
+      var es = obj[key + "_es"];
+      if (typeof es === "string" && es.trim().length) return es;
+      if (Array.isArray(es) && es.length) return es;
+    }
+    return obj[key];
+  }
+
+  /* Same, for a dotted path like "hero.title". Only the final segment has a
+     Spanish twin; the parent objects are structure, not text. */
   function get(obj, path) {
-    return path.split(".").reduce(function (o, k) {
+    var parts = path.split(".");
+    var last = parts.pop();
+    var parent = parts.reduce(function (o, k) {
       return o == null ? undefined : o[k];
     }, obj);
+    return tr(parent, last);
   }
+
   function imgSrc(p) { return String(p || "").replace(/^\//, ""); }
   function loadJSON(path) {
     return fetch(path, { cache: "no-store" })
@@ -67,19 +95,19 @@
     cards: function (items) {
       return items.map(function (i) {
         return '<div class="card"><div class="icon">' + icon(i.icon) + "</div><h3>" +
-          esc(i.title) + "</h3><p>" + esc(i.text) + "</p></div>";
+          esc(tr(i, "title")) + "</h3><p>" + esc(tr(i, "text")) + "</p></div>";
       }).join("");
     },
     steps: function (items) {
       return items.map(function (i, n) {
         return '<div class="card"><div class="icon">' + (n + 1) + "</div><h3>" +
-          esc(i.title) + "</h3><p>" + esc(i.text) + "</p></div>";
+          esc(tr(i, "title")) + "</h3><p>" + esc(tr(i, "text")) + "</p></div>";
       }).join("");
     },
     stats: function (items) {
       return items.map(function (i) {
-        return '<div class="stat"><div class="num">' + esc(i.number) +
-          '</div><div class="label">' + esc(i.label) + "</div></div>";
+        return '<div class="stat"><div class="num">' + esc(tr(i, "number")) +
+          '</div><div class="label">' + esc(tr(i, "label")) + "</div></div>";
       }).join("");
     },
     pills: function (items) {
@@ -87,26 +115,28 @@
     },
     positions: function (items) {
       return items.map(function (i) {
-        return "<li><strong>" + esc(i.name) + "</strong> — " + esc(i.description) + "</li>";
+        return "<li><strong>" + esc(tr(i, "name")) + "</strong> — " + esc(tr(i, "description")) + "</li>";
       }).join("");
     },
     checksStrong: function (items) {
       return items.map(function (i) { return "<li><strong>" + esc(i) + "</strong></li>"; }).join("");
     },
     checksPlain: function (items) {
-      return items.map(function (i) { return "<li>" + esc(i.text == null ? i : i.text) + "</li>"; }).join("");
+      return items.map(function (i) {
+        return "<li>" + esc(typeof i === "string" ? i : tr(i, "text")) + "</li>";
+      }).join("");
     },
     storyParas: function (items) {
       return items.map(function (i, n) {
         var last = n === items.length - 1 ? "margin-bottom:0;" : "";
-        return '<p style="color:var(--gray-200);' + last + '">' + esc(i.text) + "</p>";
+        return '<p style="color:var(--gray-200);' + last + '">' + esc(tr(i, "text")) + "</p>";
       }).join("");
     },
     teamCards: function (items) {
       return items.map(function (i) {
         return '<div class="card" style="background:var(--navy-700);border-color:var(--navy-500);">' +
-          '<h3 style="color:#fff;">' + esc(i.title) + '</h3>' +
-          '<p style="color:var(--gray-200);">' + esc(i.text) + "</p></div>";
+          '<h3 style="color:#fff;">' + esc(tr(i, "title")) + '</h3>' +
+          '<p style="color:var(--gray-200);">' + esc(tr(i, "text")) + "</p></div>";
       }).join("");
     }
   };
@@ -140,9 +170,11 @@
 
     // Footer description + motto
     var desc = document.querySelector(".site-footer .footer-brand p");
-    if (desc && s.footer_description) desc.textContent = s.footer_description;
+    var fd = tr(s, "footer_description");
+    if (desc && fd) desc.textContent = fd;
     var bottom = document.querySelectorAll(".site-footer .footer-bottom > span");
-    if (bottom.length > 1 && s.footer_motto) bottom[1].textContent = s.footer_motto;
+    var fm = tr(s, "footer_motto");
+    if (bottom.length > 1 && fm) bottom[1].textContent = fm;
 
     // Footer contact column. Match the plain-text items (those with no link)
     // by position among themselves, so adding a linked item above them
@@ -153,8 +185,9 @@
       var plain = [].filter.call(contactList.children, function (li) {
         return !li.querySelector("a");
       });
-      if (plain[0] && s.location) plain[0].textContent = s.location;
-      if (plain[1] && s.service_area) plain[1].textContent = s.service_area;
+      var loc = tr(s, "location"), area = tr(s, "service_area");
+      if (plain[0] && loc) plain[0].textContent = loc;
+      if (plain[1] && area) plain[1].textContent = area;
     }
 
     // Every phone link on the site (footer + contact page)
@@ -180,7 +213,7 @@
 
     // Explicit settings bindings (contact page details)
     document.querySelectorAll("[data-cms-setting]").forEach(function (el) {
-      var v = s[el.getAttribute("data-cms-setting")];
+      var v = tr(s, el.getAttribute("data-cms-setting"));
       if (typeof v === "string" && v.length) el.textContent = v;
     });
   }
@@ -216,9 +249,9 @@
       }
       grid.innerHTML = items.map(function (t) {
         return '<div class="card testimonial">' +
-          "<blockquote>“" + esc(t.quote) + "”</blockquote>" +
-          '<div class="who"><strong>' + esc(t.author) + "</strong>" +
-          (t.role ? '<span> · ' + esc(t.role) + "</span>" : "") + "</div></div>";
+          "<blockquote>“" + esc(tr(t, "quote")) + "”</blockquote>" +
+          '<div class="who"><strong>' + esc(tr(t, "author")) + "</strong>" +
+          (t.role ? '<span> · ' + esc(tr(t, "role")) + "</span>" : "") + "</div></div>";
       }).join("");
       section.hidden = false;
     }

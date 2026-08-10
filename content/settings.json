@@ -3,9 +3,14 @@
   "email_careers": "careers@ncfalconstaffing.com",
   "phone": "(980) 371-0474",
   "location": "Charlotte, North Carolina",
+  "location_es": "Charlotte, North Carolina",
   "service_area": "Serving NC & SC",
+  "service_area_es": "Serving NC & SC",
   "response_time": "Within 24 hours",
+  "response_time_es": "Within 24 hours",
   "footer_description": "Family-owned electrical staffing in Charlotte, NC. Dependable manpower for contractors, steady work for skilled electricians.",
-  "footer_motto": "Professional \u00b7 Reliable \u00b7 Family-Owned",
+  "footer_description_es": "Family-owned electrical staffing in Charlotte, NC. Dependable manpower for contractors, steady work for skilled electricians.",
+  "footer_motto": "Professional · Reliable · Family-Owned",
+  "footer_motto_es": "Professional · Reliable · Family-Owned",
   "show_gallery": false
 }

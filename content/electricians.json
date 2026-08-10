@@ -1,50 +1,77 @@
 {
   "page_head": {
     "title": "Steady work. Real growth. A team that has your back.",
-    "intro": "NC Falcon connects skilled electricians with consistent opportunities across the Carolinas. Apply once, and we'll match you to work that fits your experience."
+    "title_es": "Steady work. Real growth. A team that has your back.",
+    "intro": "NC Falcon connects skilled electricians with consistent opportunities across the Carolinas. Apply once, and we'll match you to work that fits your experience.",
+    "intro_es": "NC Falcon connects skilled electricians with consistent opportunities across the Carolinas. Apply once, and we'll match you to work that fits your experience."
   },
   "why": {
     "eyebrow": "Why Work With NC Falcon",
+    "eyebrow_es": "Why Work With NC Falcon",
     "title": "We treat our electricians like family",
+    "title_es": "We treat our electricians like family",
     "intro": "We come from the field. We know steady work and fair treatment matter.",
+    "intro_es": "We come from the field. We know steady work and fair treatment matter.",
     "cards": [
       {
         "icon": "calendar",
         "title": "Consistent Work",
-        "text": "We keep our electricians busy with opportunities matched to your skill level and location."
+        "title_es": "Consistent Work",
+        "text": "We keep our electricians busy with opportunities matched to your skill level and location.",
+        "text_es": "We keep our electricians busy with opportunities matched to your skill level and location."
       },
       {
         "icon": "trend-up",
         "title": "Professional Growth",
-        "text": "We connect you with work that builds your career, from helper to foreman."
+        "title_es": "Professional Growth",
+        "text": "We connect you with work that builds your career, from helper to foreman.",
+        "text_es": "We connect you with work that builds your career, from helper to foreman."
       },
       {
         "icon": "chat",
         "title": "Direct Communication",
-        "text": "You talk to real people who answer fast and follow through."
+        "title_es": "Direct Communication",
+        "text": "You talk to real people who answer fast and follow through.",
+        "text_es": "You talk to real people who answer fast and follow through."
       },
       {
         "icon": "map-pin",
         "title": "Carolinas & Beyond",
-        "text": "Work across NC & SC, with opportunities nationwide and possible per diem depending on the project."
+        "title_es": "Carolinas & Beyond",
+        "text": "Work across NC & SC, with opportunities nationwide and possible per diem depending on the project.",
+        "text_es": "Work across NC & SC, with opportunities nationwide and possible per diem depending on the project."
       },
       {
         "icon": "banknote",
         "title": "Fair Pay",
-        "text": "Competitive rates that respect your skills and experience."
+        "title_es": "Fair Pay",
+        "text": "Competitive rates that respect your skills and experience.",
+        "text_es": "Competitive rates that respect your skills and experience."
       },
       {
         "icon": "users",
         "title": "Relationships First",
-        "text": "We invest in the people we place. You're not a number here."
+        "title_es": "Relationships First",
+        "text": "We invest in the people we place. You're not a number here.",
+        "text_es": "We invest in the people we place. You're not a number here."
       }
     ]
   },
   "positions": {
     "eyebrow": "Now Hiring",
+    "eyebrow_es": "Now Hiring",
     "title": "Positions at every level",
+    "title_es": "Positions at every level",
     "intro": "Wherever you are in your career, we have opportunities for you.",
+    "intro_es": "Wherever you are in your career, we have opportunities for you.",
     "items": [
+      "Helpers",
+      "Apprentices",
+      "Journeymen",
+      "Lead Electricians",
+      "Foremen"
+    ],
+    "items_es": [
       "Helpers",
       "Apprentices",
       "Journeymen",
@@ -54,7 +81,10 @@
   },
   "apply": {
     "eyebrow": "Apply Online",
+    "eyebrow_es": "Apply Online",
     "title": "Start your application",
-    "notice": "Every applicant hears back within 24 hours."
+    "title_es": "Start your application",
+    "notice": "Every applicant hears back within 24 hours.",
+    "notice_es": "Every applicant hears back within 24 hours."
   }
 }
