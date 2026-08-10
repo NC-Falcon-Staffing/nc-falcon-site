@@ -46,6 +46,12 @@ collections:
           - { label: "Location", name: "location", widget: "string" }
           - { label: "Service Area", name: "service_area", widget: "string" }
           - { label: "Response Time", name: "response_time", widget: "string" }
+          - label: "Show the Gallery page"
+            name: "show_gallery"
+            widget: "boolean"
+            default: false
+            required: false
+            hint: "Leave OFF until you have real jobsite photos. When OFF, the Gallery link is hidden from the menu and footer everywhere on the site. Turn it ON once you have added photos below."
           - { label: "Footer Description", name: "footer_description", widget: "text" }
           - { label: "Footer Motto", name: "footer_motto", widget: "string" }
 
