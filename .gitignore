@@ -1,0 +1,28 @@
+# macOS junk
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows junk
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs and dependency folders (not used today, but harmless to guard)
+node_modules/
+npm-debug.log*
+*.log
+
+# Local env files — never commit secrets
+.env
+.env.*
+
+# Netlify local build cache
+.netlify/
