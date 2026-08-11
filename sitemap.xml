@@ -70,4 +70,18 @@
     <lastmod>2026-08-09</lastmod>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://ncfalconstaffing.com/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ncfalconstaffing.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ncfalconstaffing.com/es/privacy.html"/>
+    <lastmod>2026-08-11</lastmod>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ncfalconstaffing.com/es/privacy.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ncfalconstaffing.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://ncfalconstaffing.com/es/privacy.html"/>
+    <lastmod>2026-08-11</lastmod>
+    <priority>0.3</priority>
+  </url>
 </urlset>

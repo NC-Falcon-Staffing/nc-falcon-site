@@ -32,6 +32,7 @@
   <link rel="apple-touch-icon" href="images/favicon-180.png" />
 </head>
 <body data-page="contractors">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
     <div class="container nav">
@@ -49,6 +50,8 @@
       </ul>
     </div>
   </header>
+
+  <main id="main" tabindex="-1">
 
   <section class="page-head">
     <div class="container">
@@ -122,21 +125,21 @@
           <div class="form-row">
             <div class="field">
               <label for="c-company">Company Name <span class="req">*</span></label>
-              <input id="c-company" name="company_name" type="text" required />
+              <input id="c-company" name="company_name" type="text" required autocomplete="organization" />
             </div>
             <div class="field">
               <label for="c-contact">Contact Name <span class="req">*</span></label>
-              <input id="c-contact" name="contact_name" type="text" required />
+              <input id="c-contact" name="contact_name" type="text" required autocomplete="name" />
             </div>
           </div>
           <div class="form-row">
             <div class="field">
               <label for="c-phone">Phone Number <span class="req">*</span></label>
-              <input id="c-phone" name="phone" type="tel" required />
+              <input id="c-phone" name="phone" type="tel" required autocomplete="tel" />
             </div>
             <div class="field">
               <label for="c-email">Email Address <span class="req">*</span></label>
-              <input id="c-email" name="email" type="email" required />
+              <input id="c-email" name="email" type="email" required autocomplete="email" />
             </div>
           </div>
           <div class="field">
@@ -175,18 +178,20 @@
             <label for="c-notes">Additional Notes</label>
             <textarea id="c-notes" name="notes" placeholder="Scope, certifications required, shift details, anything else we should know."></textarea>
           </div>
+          <p class="form-note privacy-note">We use these details to respond to your request. See our <a href="privacy.html">Privacy Policy</a>.</p>
           <button class="btn btn--primary btn--lg btn--block" type="submit">Submit Request</button>
           <p class="form-status" role="status" aria-live="polite" style="margin-top:1rem;"></p>
         </form>
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand"><a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-white-web.png" alt="NC Falcon" /></a><p>Family-owned electrical staffing in Charlotte, NC. Dependable manpower for contractors, steady work for skilled electricians.</p></div>
-        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
         <div><h4>Get Started</h4><ul class="footer-links"><li><a href="contractors.html">For Contractors</a></li><li><a href="electricians.html">For Electricians</a></li><li><a href="contact.html#meeting">Request a Meeting</a></li></ul></div>
         <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a></li><li><a href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a></li><li><a href="tel:+19803710474">(980) 371-0474</a></li>
             <li>Charlotte, North Carolina</li><li>Serving NC &amp; SC</li></ul></div>

@@ -32,6 +32,7 @@
   <link rel="apple-touch-icon" href="images/favicon-180.png" />
 </head>
 <body data-page="contact">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
     <div class="container nav">
@@ -49,6 +50,8 @@
       </ul>
     </div>
   </header>
+
+  <main id="main" tabindex="-1">
 
   <section class="page-head">
     <div class="container">
@@ -108,16 +111,16 @@
             <input type="hidden" name="form_type" value="General Contact" />
             <div class="field">
               <label for="m-name">Name <span class="req">*</span></label>
-              <input id="m-name" name="name" type="text" required />
+              <input id="m-name" name="name" type="text" required autocomplete="name" />
             </div>
             <div class="form-row">
               <div class="field">
                 <label for="m-email">Email <span class="req">*</span></label>
-                <input id="m-email" name="email" type="email" required />
+                <input id="m-email" name="email" type="email" required autocomplete="email" />
               </div>
               <div class="field">
                 <label for="m-phone">Phone</label>
-                <input id="m-phone" name="phone" type="tel" />
+                <input id="m-phone" name="phone" type="tel" autocomplete="tel" />
               </div>
             </div>
             <div class="field">
@@ -133,6 +136,7 @@
               <label for="m-message">Message <span class="req">*</span></label>
               <textarea id="m-message" name="message" required></textarea>
             </div>
+            <p class="form-note privacy-note">We use these details only to reply to you. See our <a href="privacy.html">Privacy Policy</a>.</p>
             <button class="btn btn--primary btn--lg btn--block" type="submit">Send Message</button>
             <p class="form-status" role="status" aria-live="polite" style="margin-top:1rem;"></p>
           </form>
@@ -158,21 +162,21 @@
           <div class="form-row">
             <div class="field">
               <label for="mr-name">Name <span class="req">*</span></label>
-              <input id="mr-name" name="name" type="text" required />
+              <input id="mr-name" name="name" type="text" required autocomplete="name" />
             </div>
             <div class="field">
               <label for="mr-company">Company</label>
-              <input id="mr-company" name="company" type="text" />
+              <input id="mr-company" name="company" type="text" autocomplete="organization" />
             </div>
           </div>
           <div class="form-row">
             <div class="field">
               <label for="mr-email">Email <span class="req">*</span></label>
-              <input id="mr-email" name="email" type="email" required />
+              <input id="mr-email" name="email" type="email" required autocomplete="email" />
             </div>
             <div class="field">
               <label for="mr-phone">Phone</label>
-              <input id="mr-phone" name="phone" type="tel" />
+              <input id="mr-phone" name="phone" type="tel" autocomplete="tel" />
             </div>
           </div>
           <div class="form-row">
@@ -189,18 +193,20 @@
             <label for="mr-topic">What would you like to discuss?</label>
             <textarea id="mr-topic" name="topic"></textarea>
           </div>
+          <p class="form-note privacy-note">We use these details only to arrange the meeting. See our <a href="privacy.html">Privacy Policy</a>.</p>
           <button class="btn btn--navy btn--lg btn--block" type="submit">Request Meeting</button>
           <p class="form-status" role="status" aria-live="polite" style="margin-top:1rem;"></p>
         </form>
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand"><a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-white-web.png" alt="NC Falcon" /></a><p>Family-owned electrical staffing in Charlotte, NC. Dependable manpower for contractors, steady work for skilled electricians.</p></div>
-        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
         <div><h4>Get Started</h4><ul class="footer-links"><li><a href="contractors.html">For Contractors</a></li><li><a href="electricians.html">For Electricians</a></li><li><a href="contact.html#meeting">Request a Meeting</a></li></ul></div>
         <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a></li><li><a href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a></li><li><a href="tel:+19803710474">(980) 371-0474</a></li>
             <li>Charlotte, North Carolina</li><li>Serving NC &amp; SC</li></ul></div>

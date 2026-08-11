@@ -32,6 +32,7 @@
   <link rel="apple-touch-icon" href="images/favicon-180.png" />
 </head>
 <body data-page="electricians">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
     <div class="container nav">
@@ -49,6 +50,8 @@
       </ul>
     </div>
   </header>
+
+  <main id="main" tabindex="-1">
 
   <section class="page-head">
     <div class="container">
@@ -109,22 +112,22 @@
           <input type="hidden" name="form_type" value="Electrician Application" />
           <div class="field">
             <label for="e-name">Name <span class="req">*</span></label>
-            <input id="e-name" name="name" type="text" required />
+            <input id="e-name" name="name" type="text" required autocomplete="name" />
           </div>
           <div class="form-row">
             <div class="field">
               <label for="e-phone">Phone Number <span class="req">*</span></label>
-              <input id="e-phone" name="phone" type="tel" required />
+              <input id="e-phone" name="phone" type="tel" required autocomplete="tel" />
             </div>
             <div class="field">
               <label for="e-email">Email Address <span class="req">*</span></label>
-              <input id="e-email" name="email" type="email" required />
+              <input id="e-email" name="email" type="email" required autocomplete="email" />
             </div>
           </div>
           <div class="form-row">
             <div class="field">
               <label for="e-city">City <span class="req">*</span></label>
-              <input id="e-city" name="city" type="text" required />
+              <input id="e-city" name="city" type="text" required autocomplete="address-level2" />
             </div>
             <div class="field">
               <label for="e-years">Years of Experience</label>
@@ -157,18 +160,20 @@
             <label for="e-skills">Additional Skills</label>
             <textarea id="e-skills" name="additional_skills" placeholder="Specialties, equipment, languages, availability, anything that sets you apart."></textarea>
           </div>
+          <p class="form-note privacy-note">We store your application and resume to match you with work, and share them with a contractor only when we put you forward for a job. See our <a href="privacy.html">Privacy Policy</a>.</p>
           <button class="btn btn--primary btn--lg btn--block" type="submit">Submit Application</button>
           <p class="form-status" role="status" aria-live="polite" style="margin-top:1rem;"></p>
         </form>
       </div>
     </div>
   </section>
+  </main>
 
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand"><a class="brand" href="index.html"><img class="logo-img" src="images/falcon-logo-white-web.png" alt="NC Falcon" /></a><p>Family-owned electrical staffing in Charlotte, NC. Dependable manpower for contractors, steady work for skilled electricians.</p></div>
-        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+        <div><h4>Company</h4><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
         <div><h4>Get Started</h4><ul class="footer-links"><li><a href="contractors.html">For Contractors</a></li><li><a href="electricians.html">For Electricians</a></li><li><a href="contact.html#meeting">Request a Meeting</a></li></ul></div>
         <div><h4>Contact</h4><ul class="footer-links"><li><a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a></li><li><a href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a></li><li><a href="tel:+19803710474">(980) 371-0474</a></li>
             <li>Charlotte, North Carolina</li><li>Serving NC &amp; SC</li></ul></div>

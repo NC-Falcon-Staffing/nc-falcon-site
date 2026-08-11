@@ -44,6 +44,31 @@ editor:
 
 collections:
   # ----------------------------------------------------------
+  # PUBLISH
+  # Saving anything else parks the change in GitHub without deploying.
+  # Saving THIS is what pushes the site live. See scripts/netlify-should-build.sh
+  # and "Publishing" in README.md.
+  # ----------------------------------------------------------
+  - name: "publish"
+    label: "🚀 Publish Site"
+    description: "Your edits are saved but not live yet. Open this and press Save to push everything you've changed onto the real website."
+    files:
+      - name: "publish"
+        label: "Publish Site"
+        file: "content/publish.json"
+        fields:
+          - label: "Publish date & time"
+            name: "last_published"
+            widget: "datetime"
+            format: "YYYY-MM-DDTHH:mm:ss.SSS[Z]"
+            picker_utc: true
+            hint: "Set this to right now, then press Save. That is what makes your changes go live."
+          - label: "What changed?"
+            name: "note"
+            widget: "string"
+            hint: "A few words for your own records, e.g. 'new phone number and two testimonials'. Changing this also lets you press Save."
+
+  # ----------------------------------------------------------
   # SITE-WIDE SETTINGS
   # ----------------------------------------------------------
   - name: "settings"

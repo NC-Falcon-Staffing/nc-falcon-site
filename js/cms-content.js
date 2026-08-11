@@ -246,14 +246,21 @@
       if (data.section) {
         var eb = section.querySelector(".eyebrow");
         var h2 = section.querySelector("h2");
-        if (eb && data.section.eyebrow) eb.textContent = data.section.eyebrow;
-        if (h2 && data.section.title) h2.textContent = data.section.title;
+        // Read through tr() like every other binding, or the Spanish page
+        // shows the English heading no matter what eyebrow_es / title_es say.
+        var ebTxt = tr(data.section, "eyebrow");
+        var h2Txt = tr(data.section, "title");
+        if (eb && ebTxt) eb.textContent = ebTxt;
+        if (h2 && h2Txt) h2.textContent = h2Txt;
       }
       grid.innerHTML = items.map(function (t) {
+        // Same for role: test the translated value, not the English key, so a
+        // testimonial with only role_es filled in still shows its role.
+        var role = tr(t, "role");
         return '<div class="card testimonial">' +
           "<blockquote>“" + esc(tr(t, "quote")) + "”</blockquote>" +
           '<div class="who"><strong>' + esc(tr(t, "author")) + "</strong>" +
-          (t.role ? '<span> · ' + esc(tr(t, "role")) + "</span>" : "") + "</div></div>";
+          (role ? '<span> · ' + esc(role) + "</span>" : "") + "</div></div>";
       }).join("");
       section.hidden = false;
     }

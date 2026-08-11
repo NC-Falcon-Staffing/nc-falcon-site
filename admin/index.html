@@ -12,6 +12,16 @@
   <!-- Pinned deliberately. A floating range (^3.0.0) means any release lands
        on the live editor unannounced. PKCE login needs >= 3.8.3.
        To upgrade: bump this number, deploy, then log in and confirm it works. -->
-  <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
+  <!-- integrity= is the sha384 of the 3.15.1 bundle. If unpkg ever serves
+       different bytes under this version, the browser refuses to run them.
+       This editor can commit to GitHub, so a swapped bundle would be serious.
+       When you bump the version above you MUST regenerate this hash or the
+       editor will refuse to load:
+         curl -sL https://unpkg.com/decap-cms@<version>/dist/decap-cms.js \
+           | openssl dgst -sha384 -binary | openssl base64 -A -->
+  <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"
+          integrity="sha384-in6eHztHveqQ7uMZ1fDaKlDmacQLFuLH2wWrFTiymyuS8zQ5bixwL8U3AeRi8h/L"
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"></script>
 </body>
 </html>
