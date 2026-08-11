@@ -103,14 +103,32 @@ decides:
 | `content/publish.json` | **Deploys**, carrying every change that piled up. |
 | Anything else (HTML, CSS, JS, config) | **Deploys.** Developer work always ships. |
 
-**For editors:** edit as many pages as you like — the work is saved safely in
-GitHub the moment you press Save, it just isn't on the public site yet. When
-you're ready, open **🚀 Publish Site** in the editor, set the date to now,
-write a line about what changed, and press Save. That one save pushes
-everything live at once. Ten pages of edits cost one deploy instead of ten.
+**⚠️ There is no Save button.** Decap only splits Save from Publish under
+`publish_mode: editorial_workflow`, which we don't use. On every screen, the
+teal **Publish** button is the only commit action — and on ordinary page
+screens it means nothing more than "save my work". The gate is what decides
+whether a commit becomes a deploy, not the button.
 
-If Save is greyed out on that screen, nothing on it has changed yet — adjust
-the date or the note and it will enable.
+So the same button does two different things depending on where you are:
+
+| Screen | Pressing Publish |
+| --- | --- |
+| Any page, settings, gallery, testimonials | Commits to GitHub. **No deploy. Not live.** |
+| **🚀 GO LIVE** | Commits the marker. **Deploys everything that piled up.** |
+
+This is why the marker collection is called **GO LIVE** and not "Publish Site" —
+"press Publish to publish" would be indistinguishable from "press Publish to
+save". Don't rename it back. Every other collection's description repeats the
+reminder, because the sidebar is where an editor decides what to do next.
+
+**For editors:** edit as many pages as you like, pressing Publish on each — the
+work is safe in GitHub, it just isn't on the public site yet. When you're done,
+open **🚀 GO LIVE**, set the date to now, write a line about what changed, and
+press Publish there. That one commit pushes everything live at once. Ten pages
+of edits cost one deploy instead of ten.
+
+If the Publish button is greyed out on the GO LIVE screen, nothing on it has
+changed yet — adjust the date or the note and it will enable.
 
 **Caveat:** edits are invisible until published. There is no preview of pending
 changes; the live site keeps showing the last published version, which is the

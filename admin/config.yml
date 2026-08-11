@@ -13,13 +13,19 @@ backend:
   auth_endpoint: /sites/8c3bd649-71e3-457b-945e-028010c8a069/pkce
   auth_token_endpoint: /sites/8c3bd649-71e3-457b-945e-028010c8a069/token
   gateway_url: https://gateway.decapbridge.com
-  # Commits record who made the change
+  # Commits record who made the change.
+  # {{author-login}} is deliberately NOT used here: it resolves to the editor's
+  # email address, and this repo is public (org-owned private repos need
+  # Netlify Pro). Name-only attribution keeps the log readable without putting
+  # anyone's address in it. Note this only controls the commit MESSAGE — the
+  # git author field is set by DecapBridge from the logged-in identity and
+  # still carries the address.
   commit_messages:
-    create: 'Create {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via site editor'
-    update: 'Update {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via site editor'
-    delete: 'Delete {{collection}} "{{slug}}" - {{author-name}} <{{author-login}}> via site editor'
-    uploadMedia: 'Upload "{{path}}" - {{author-name}} <{{author-login}}> via site editor'
-    deleteMedia: 'Delete "{{path}}" - {{author-name}} <{{author-login}}> via site editor'
+    create: 'Create {{collection}} "{{slug}}" - {{author-name}} via site editor'
+    update: 'Update {{collection}} "{{slug}}" - {{author-name}} via site editor'
+    delete: 'Delete {{collection}} "{{slug}}" - {{author-name}} via site editor'
+    uploadMedia: 'Upload "{{path}}" - {{author-name}} via site editor'
+    deleteMedia: 'Delete "{{path}}" - {{author-name}} via site editor'
 
 # Maps the PKCE login details onto the editor's profile
 auth:
@@ -44,36 +50,44 @@ editor:
 
 collections:
   # ----------------------------------------------------------
-  # PUBLISH
-  # Saving anything else parks the change in GitHub without deploying.
-  # Saving THIS is what pushes the site live. See scripts/netlify-should-build.sh
-  # and "Publishing" in README.md.
+  # GO LIVE
+  # Committing any other entry parks the change in GitHub without deploying.
+  # Committing THIS one is what pushes the site live.
+  # See scripts/netlify-should-build.sh and "Publishing" in README.md.
+  #
+  # ON WORDING: Decap labels its commit button "Publish" on every screen,
+  # including the ordinary page screens where pressing it only means "save my
+  # work". So this collection deliberately avoids the word "Publish" in its own
+  # name — otherwise "press Publish to publish" means two different things and
+  # an editor cannot tell them apart. It is "GO LIVE" everywhere it is named.
+  # There is no Save button anywhere in this editor; that only exists under
+  # publish_mode: editorial_workflow, which we are not using.
   # ----------------------------------------------------------
   - name: "publish"
-    label: "🚀 Publish Site"
-    description: "Your edits are saved but not live yet. Open this and press Save to push everything you've changed onto the real website."
+    label: "🚀 GO LIVE"
+    description: "Editing a page saves it, but does NOT put it on the website. When you have finished all your edits, open this screen and press the blue Publish button — that is what pushes everything onto ncfalconstaffing.com."
     files:
       - name: "publish"
-        label: "Publish Site"
+        label: "GO LIVE — update the website"
         file: "content/publish.json"
         fields:
-          - label: "Publish date & time"
+          - label: "Go live at"
             name: "last_published"
             widget: "datetime"
             format: "YYYY-MM-DDTHH:mm:ss.SSS[Z]"
             picker_utc: true
-            hint: "Set this to right now, then press Save. That is what makes your changes go live."
+            hint: "Set this to right now, then press the blue Publish button at the top. Everything you have edited since the last time goes live together."
           - label: "What changed?"
             name: "note"
             widget: "string"
-            hint: "A few words for your own records, e.g. 'new phone number and two testimonials'. Changing this also lets you press Save."
+            hint: "A few words for your own records, e.g. 'new phone number and two testimonials'. If the Publish button is greyed out, change this line and it will wake up."
 
   # ----------------------------------------------------------
   # SITE-WIDE SETTINGS
   # ----------------------------------------------------------
   - name: "settings"
     label: "⚙️ Contact Info & Footer"
-    description: "Email addresses, phone, location, and the footer text shown on every page."
+    description: "Email addresses, phone, location, and the footer text shown on every page. Saved changes do not appear on the website until you use 🚀 GO LIVE."
     files:
       - name: "site"
         label: "Contact Info & Footer"
@@ -104,7 +118,7 @@ collections:
   # ----------------------------------------------------------
   - name: "gallery"
     label: "📸 Gallery Photos"
-    description: "Add, remove, and reorder the photos on the Gallery page. Drag items to reorder."
+    description: "Add, remove, and reorder the photos on the Gallery page. Drag items to reorder. Saved changes do not appear on the website until you use 🚀 GO LIVE."
     files:
       - name: "gallery"
         label: "Gallery Page"
@@ -146,7 +160,7 @@ collections:
   # ----------------------------------------------------------
   - name: "testimonials"
     label: "💬 Testimonials"
-    description: "Quotes from contractors and electricians, shown on the home page. Leave empty to hide the section."
+    description: "Quotes from contractors and electricians, shown on the home page. Leave empty to hide the section. Saved changes do not appear on the website until you use 🚀 GO LIVE."
     files:
       - name: "testimonials"
         label: "Testimonials"
@@ -179,7 +193,7 @@ collections:
   # ----------------------------------------------------------
   - name: "pages"
     label: "📄 Page Text"
-    description: "The words on each page of the site."
+    description: "The words on each page of the site. Saved changes do not appear on the website until you use 🚀 GO LIVE."
     files:
       - name: "home"
         label: "Home Page"
