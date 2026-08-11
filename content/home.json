@@ -1,15 +1,15 @@
 {
   "hero": {
     "badge": "Family-Owned · Charlotte, NC",
-    "badge_es": "Family-Owned · Charlotte, NC",
-    "title": "Dependable electrical manpower, when you need it.",
-    "title_es": "Dependable electrical manpower, when you need it.",
-    "lead": "NC Falcon connects contractors with skilled, evaluated electricians across North and South Carolina, and gives our electricians steady work. We respond within 24 hours.",
-    "lead_es": "NC Falcon connects contractors with skilled, evaluated electricians across North and South Carolina, and gives our electricians steady work. We respond within 24 hours.",
+    "badge_es": "Family-Owned · Charlotte, NC aasdasd",
     "primary_button": "I Need Electricians",
-    "primary_button_es": "I Need Electricians",
+    "secondary_button_es": "I'm an Electrician",
+    "lead_es": "NC Falcon connects contractors with skilled, evaluated electricians across North and South Carolina, and gives our electricians steady work. We respond within 24 hours.",
+    "title_es": "TEST TEST TEST",
+    "title": "Dependable electrical manpower, when you need it.",
+    "lead": "NC Falcon connects contractors with skilled, evaluated electricians across North and South Carolina, and gives our electricians steady work. We respond within 24 hours.",
     "secondary_button": "I'm an Electrician",
-    "secondary_button_es": "I'm an Electrician"
+    "primary_button_es": "I Need Electricians"
   },
   "why": {
     "eyebrow": "Why NC Falcon",
@@ -84,12 +84,8 @@
     }
   ],
   "staffing": {
-    "eyebrow": "Electrical Staffing",
     "eyebrow_es": "Electrical Staffing",
-    "title": "Every skill level your job calls for",
-    "title_es": "Every skill level your job calls for",
-    "lead": "From helpers to foremen, we recruit through referrals, industry connections, and word of mouth, then match the right person to your project.",
-    "lead_es": "From helpers to foremen, we recruit through referrals, industry connections, and word of mouth, then match the right person to your project.",
+    "eyebrow": "Electrical Staffing",
     "positions": [
       {
         "name": "Helpers",
@@ -122,8 +118,12 @@
         "description_es": "run the crew and keep you on schedule"
       }
     ],
+    "lead_es": "From helpers to foremen, we recruit through referrals, industry connections, and word of mouth, then match the right person to your project.",
     "button": "See how it works →",
-    "button_es": "See how it works →"
+    "title_es": "Every skill level your job calls for",
+    "title": "Every skill level your job calls for",
+    "button_es": "See how it works →",
+    "lead": "From helpers to foremen, we recruit through referrals, industry connections, and word of mouth, then match the right person to your project."
   },
   "industries": {
     "title": "Industries we serve",
@@ -154,21 +154,21 @@
     ]
   },
   "cta": {
-    "eyebrow": "Get Started",
     "eyebrow_es": "Get Started",
-    "title": "Whichever side you're on, we're ready",
-    "title_es": "Whichever side you're on, we're ready",
+    "eyebrow": "Get Started",
     "contractor_title": "For Contractors",
-    "contractor_title_es": "For Contractors",
-    "contractor_text": "Tell us what you need and we'll get the right people on site.",
-    "contractor_text_es": "Tell us what you need and we'll get the right people on site.",
-    "contractor_button": "Request Manpower",
     "contractor_button_es": "Request Manpower",
     "electrician_title": "For Electricians",
-    "electrician_title_es": "For Electricians",
     "electrician_text": "Apply online, upload your resume, and we'll be in touch.",
-    "electrician_text_es": "Apply online, upload your resume, and we'll be in touch.",
+    "electrician_button_es": "Apply Now",
+    "title_es": "Whichever side you're on, we're ready",
+    "contractor_text_es": "Tell us what you need and we'll get the right people on site.",
+    "contractor_text": "Tell us what you need and we'll get the right people on site.",
     "electrician_button": "Apply Now",
-    "electrician_button_es": "Apply Now"
+    "title": "Whichever side you're on, we're ready",
+    "electrician_text_es": "Apply online, upload your resume, and we'll be in touch.",
+    "electrician_title_es": "For Electricians",
+    "contractor_button": "Request Manpower",
+    "contractor_title_es": "For Contractors"
   }
 }
