@@ -1,5 +1,5 @@
 # =============================================================
-# NC Falcon — Site Editor configuration (Decap CMS)
+# NC Falcon - Site Editor configuration (Decap CMS)
 # Auth: DecapBridge (PKCE). Editors log in at /admin with Google
 # or a password; DecapBridge commits to GitHub on their behalf.
 # =============================================================
@@ -13,13 +13,9 @@ backend:
   auth_endpoint: /sites/8c3bd649-71e3-457b-945e-028010c8a069/pkce
   auth_token_endpoint: /sites/8c3bd649-71e3-457b-945e-028010c8a069/token
   gateway_url: https://gateway.decapbridge.com
-  # Commits record who made the change.
-  # {{author-login}} is deliberately NOT used here: it resolves to the editor's
-  # email address, and this repo is public (org-owned private repos need
-  # Netlify Pro). Name-only attribution keeps the log readable without putting
-  # anyone's address in it. Note this only controls the commit MESSAGE — the
-  # git author field is set by DecapBridge from the logged-in identity and
-  # still carries the address.
+  # Commits record who made the change. No {{author-login}}: it resolves to
+  # the editor's email and this repo is public. Covers the commit message only;
+  # the git author field is set by DecapBridge and still carries the address.
   commit_messages:
     create: 'Create {{collection}} "{{slug}}" - {{author-name}} via site editor'
     update: 'Update {{collection}} "{{slug}}" - {{author-name}} via site editor'
@@ -50,25 +46,19 @@ editor:
 
 collections:
   # ----------------------------------------------------------
-  # GO LIVE
-  # Committing any other entry parks the change in GitHub without deploying.
-  # Committing THIS one is what pushes the site live.
+  # GO LIVE. Committing this entry is what deploys the site.
+  # Every other entry commits to GitHub without deploying.
   # See scripts/netlify-should-build.sh and "Publishing" in README.md.
   #
-  # ON WORDING: Decap labels its commit button "Publish" on every screen,
-  # including the ordinary page screens where pressing it only means "save my
-  # work". So this collection deliberately avoids the word "Publish" in its own
-  # name — otherwise "press Publish to publish" means two different things and
-  # an editor cannot tell them apart. It is "GO LIVE" everywhere it is named.
-  # There is no Save button anywhere in this editor; that only exists under
-  # publish_mode: editorial_workflow, which we are not using.
+  # Named GO LIVE rather than "Publish": Decap labels its commit button
+  # "Publish" on every screen, so that word already means "save" here.
   # ----------------------------------------------------------
   - name: "publish"
-    label: "🚀 GO LIVE"
-    description: "Editing a page saves it, but does NOT put it on the website. When you have finished all your edits, open this screen and press the blue Publish button — that is what pushes everything onto ncfalconstaffing.com."
+    label: "GO LIVE"
+    description: "Puts everything you have edited onto the website. Editing a page saves it, but does not publish it."
     files:
       - name: "publish"
-        label: "GO LIVE — update the website"
+        label: "GO LIVE"
         file: "content/publish.json"
         fields:
           - label: "Go live at"
@@ -76,18 +66,18 @@ collections:
             widget: "datetime"
             format: "YYYY-MM-DDTHH:mm:ss.SSS[Z]"
             picker_utc: true
-            hint: "Set this to right now, then press the blue Publish button at the top. Everything you have edited since the last time goes live together."
+            hint: "Set this to now, then press Publish."
           - label: "What changed?"
             name: "note"
             widget: "string"
-            hint: "A few words for your own records, e.g. 'new phone number and two testimonials'. If the Publish button is greyed out, change this line and it will wake up."
+            hint: "A few words for your records. Example: new phone number and two testimonials. Publish stays greyed out until something on this screen changes."
 
   # ----------------------------------------------------------
   # SITE-WIDE SETTINGS
   # ----------------------------------------------------------
   - name: "settings"
-    label: "⚙️ Contact Info & Footer"
-    description: "Email addresses, phone, location, and the footer text shown on every page. Saved changes do not appear on the website until you use 🚀 GO LIVE."
+    label: "Contact Info & Footer"
+    description: "Email addresses, phone, location, and the footer text shown on every page."
     files:
       - name: "site"
         label: "Contact Info & Footer"
@@ -108,6 +98,12 @@ collections:
             default: false
             required: false
             hint: "Leave OFF until you have real jobsite photos. When OFF, the Gallery link is hidden from the menu and footer everywhere on the site. Turn it ON once you have added photos below."
+          - label: "Show the Spanish privacy policy"
+            name: "show_privacy_es"
+            widget: "boolean"
+            default: false
+            required: false
+            hint: "Leave OFF until a native Spanish speaker has read the translation. It is a legal document, so a rough translation is worse than none. When OFF, Spanish visitors who click Privacidad get the English policy instead. The English policy is always available either way."
           - { label: "Footer Description", name: "footer_description", widget: "text" }
           - { label: "Footer Description (Español)", name: "footer_description_es", widget: "text", required: false }
           - { label: "Footer Motto", name: "footer_motto", widget: "string" }
@@ -117,8 +113,8 @@ collections:
   # GALLERY
   # ----------------------------------------------------------
   - name: "gallery"
-    label: "📸 Gallery Photos"
-    description: "Add, remove, and reorder the photos on the Gallery page. Drag items to reorder. Saved changes do not appear on the website until you use 🚀 GO LIVE."
+    label: "Gallery Photos"
+    description: "Add, remove, and reorder the photos on the Gallery page. Drag items to reorder."
     files:
       - name: "gallery"
         label: "Gallery Page"
@@ -159,8 +155,8 @@ collections:
   # TESTIMONIALS
   # ----------------------------------------------------------
   - name: "testimonials"
-    label: "💬 Testimonials"
-    description: "Quotes from contractors and electricians, shown on the home page. Leave empty to hide the section. Saved changes do not appear on the website until you use 🚀 GO LIVE."
+    label: "Testimonials"
+    description: "Quotes from contractors and electricians, shown on the home page. Leave empty to hide the section."
     files:
       - name: "testimonials"
         label: "Testimonials"
@@ -192,8 +188,8 @@ collections:
   # PAGES
   # ----------------------------------------------------------
   - name: "pages"
-    label: "📄 Page Text"
-    description: "The words on each page of the site. Saved changes do not appear on the website until you use 🚀 GO LIVE."
+    label: "Page Text"
+    description: "The words on each page of the site."
     files:
       - name: "home"
         label: "Home Page"
@@ -243,7 +239,7 @@ collections:
             name: "stats"
             widget: "list"
             collapsed: true
-            summary: "{{fields.number}} — {{fields.label}}"
+            summary: "{{fields.number}} - {{fields.label}}"
             fields:
               - { label: "Number", name: "number", widget: "string" }
               - { label: "Number (Español)", name: "number_es", widget: "string", required: false }
@@ -547,6 +543,39 @@ collections:
               - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
               - { label: "Notice Banner", name: "notice", widget: "string" }
               - { label: "Notice Banner (Español)", name: "notice_es", widget: "string", required: false }
+
+      - name: "privacy"
+        label: "Privacy Policy"
+        file: "content/privacy.json"
+        fields:
+          - label: "Page Heading"
+            name: "page_head"
+            widget: "object"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
+              - { label: "Last updated line", name: "updated", widget: "string", hint: "Change this whenever you change anything on the page." }
+              - { label: "Last updated line (Español)", name: "updated_es", widget: "string", required: false }
+          - { label: "Opening paragraph", name: "intro", widget: "text" }
+          - { label: "Opening paragraph (Español)", name: "intro_es", widget: "text", required: false }
+          - { label: "Summary Box Heading", name: "summary_heading", widget: "string" }
+          - { label: "Summary Box Heading (Español)", name: "summary_heading_es", widget: "string", required: false }
+          - { label: "Summary Box Text", name: "summary", widget: "text" }
+          - { label: "Summary Box Text (Español)", name: "summary_es", widget: "text", required: false }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            summary: "{{fields.heading}}"
+            hint: "Each section is a heading and its text. Drag to reorder. In the text box: leave a blank line between paragraphs, start a line with '- ' to make a bullet, and wrap words in **two stars** to bold them."
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Heading (Español)", name: "heading_es", widget: "string", required: false }
+              - { label: "Text", name: "body", widget: "text" }
+              - { label: "Text (Español)", name: "body_es", widget: "text", required: false }
+          - { label: "Contact Heading", name: "contact_heading", widget: "string" }
+          - { label: "Contact Heading (Español)", name: "contact_heading_es", widget: "string", required: false }
+          - { label: "Contact Intro", name: "contact_lead", widget: "string" }
+          - { label: "Contact Intro (Español)", name: "contact_lead_es", widget: "string", required: false }
 
       - name: "contact"
         label: "Contact Page"

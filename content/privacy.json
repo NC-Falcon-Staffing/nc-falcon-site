@@ -1,0 +1,74 @@
+{
+  "page_head": {
+    "title": "Privacy Policy",
+    "title_es": "Política de Privacidad",
+    "updated": "Last updated: August 11, 2026",
+    "updated_es": "Última actualización: 11 de agosto de 2026"
+  },
+  "intro": "NC Falcon Electrical Staffing (\"NC Falcon\", \"we\", \"us\") is an electrical staffing company based in Charlotte, North Carolina. This page explains what we collect through this website, why, and what you can ask us to do about it.",
+  "intro_es": "NC Falcon Electrical Staffing (\"NC Falcon\", \"nosotros\") es una empresa de personal eléctrico con sede en Charlotte, Carolina del Norte. Esta página explica qué recopilamos a través de este sitio web, para qué, y qué puede pedirnos que hagamos al respecto.",
+  "summary_heading": "The short version",
+  "summary_heading_es": "En resumen",
+  "summary": "**We collect only what you type into our forms.** This site sets no cookies, runs no analytics, and has no advertising or tracking scripts. If you never submit a form, we never learn who you are.",
+  "summary_es": "**Solo recopilamos lo que usted escribe en nuestros formularios.** Este sitio no usa cookies, no usa analítica y no tiene scripts de publicidad ni de rastreo. Si nunca envía un formulario, nunca sabemos quién es usted.",
+  "sections": [
+    {
+      "heading": "What we collect",
+      "heading_es": "Qué recopilamos",
+      "body": "Four forms on this site send information to us. Each one collects only what it shows on screen:\n\n- **Request manpower** (contractors) - company name, contact name, phone, email, project location, crew size, skill level, dates, and any notes you add.\n- **Apply for work** (electricians) - your name, phone, email, city, years of experience, skill level, certifications, anything you write in the skills box, and **your resume file** if you choose to upload one.\n- **Send us a message** - your name, email, optional phone, what kind of inquiry it is, and your message.\n- **Request a meeting** - your name, optional company, email, phone, preferred date and time, and what you'd like to discuss.\n\nOur forms also record which language version of the site you used, so we can reply in English or Spanish.\n\nWe do not ask for, and you should not send us, your Social Security number, date of birth, driver's licence number, bank details, or immigration documents through this website. If we need any of that to place you on a job, we will collect it separately and tell you why at the time.",
+      "body_es": "Cuatro formularios de este sitio nos envían información. Cada uno recopila únicamente lo que muestra en pantalla:\n\n- **Solicitar personal** (contratistas) — nombre de la empresa, nombre de contacto, teléfono, correo electrónico, ubicación del proyecto, tamaño de la cuadrilla, nivel de experiencia, fechas y las notas que agregue.\n- **Solicitar empleo** (electricistas) — su nombre, teléfono, correo electrónico, ciudad, años de experiencia, nivel de experiencia, certificaciones, lo que escriba en el campo de habilidades y **su currículum** si decide subirlo.\n- **Enviarnos un mensaje** — su nombre, correo electrónico, teléfono (opcional), el tipo de consulta y su mensaje.\n- **Solicitar una reunión** — su nombre, empresa (opcional), correo electrónico, teléfono, fecha y hora preferidas, y lo que desea tratar.\n\nNuestros formularios también registran qué versión del sitio usó, en inglés o en español, para poder responderle en su idioma.\n\nNo pedimos, y usted no debe enviarnos por este sitio web, su número de Seguro Social, fecha de nacimiento, número de licencia de conducir, datos bancarios ni documentos migratorios. Si necesitamos algo de eso para colocarlo en un trabajo, se lo pediremos por separado y le explicaremos por qué en ese momento."
+    },
+    {
+      "heading": "Why we collect it",
+      "heading_es": "Para qué la usamos",
+      "body": "To do the thing you asked us to do: reply to your message, quote a manpower request, or consider you for electrical work. For applicants, that means reviewing your experience against jobs we are staffing and contacting you about ones that fit.\n\nWe do not sell your information. We do not rent it, trade it, or hand it to data brokers or advertisers.",
+      "body_es": "Para hacer lo que usted nos pidió: responder a su mensaje, cotizar una solicitud de personal o considerarlo para trabajo eléctrico. Para quienes solicitan empleo, eso significa revisar su experiencia frente a los trabajos que estamos cubriendo y contactarlo por los que encajen.\n\nNo vendemos su información. No la alquilamos, no la intercambiamos y no se la entregamos a corredores de datos ni a anunciantes."
+    },
+    {
+      "heading": "Who else sees it",
+      "heading_es": "Quién más la ve",
+      "body": "These three, and no one else:\n\n- **Our own staff** read and act on submissions.\n- **Contractors we staff for.** We are a staffing agency. If we put you forward for a job, we share the parts of your application a contractor needs to make a hiring decision: your name, experience, skill level, certifications, and resume. We do this only when we are proposing you for actual work.\n- **The services that run this website.** Netlify, who host the site and receive form submissions on our behalf, and our email provider, who delivers those submissions to us. They process this information for us and are not permitted to use it for anything else.\n\nWe may also disclose information if the law requires it, or to protect our rights, safety, or property.",
+      "body_es": "Estos tres, y nadie más:\n\n- **Nuestro propio personal** lee las solicitudes y actúa sobre ellas.\n- **Los contratistas para los que trabajamos** — somos una agencia de personal. Si lo proponemos para un trabajo, compartimos las partes de su solicitud que un contratista necesita para tomar una decisión de contratación: su nombre, experiencia, nivel, certificaciones y currículum. Lo hacemos únicamente cuando lo estamos proponiendo para un trabajo real.\n- **Los servicios que hacen funcionar este sitio** — Netlify, que aloja el sitio y recibe los envíos de formularios en nuestro nombre, y nuestro proveedor de correo, que nos entrega esos envíos. Procesan esta información para nosotros y no pueden usarla para nada más.\n\nTambién podemos divulgar información si la ley lo exige, o para proteger nuestros derechos, seguridad o propiedad."
+    },
+    {
+      "heading": "Where it is stored, and for how long",
+      "heading_es": "Dónde se guarda y por cuánto tiempo",
+      "body": "Form submissions and uploaded resumes are stored on Netlify's servers in the United States and in our email system.\n\nWe keep applications for **two years** from your last contact with us, because electrical work is seasonal and a candidate who isn't right for one job is often right for the next. General enquiries and manpower requests we keep for **three years** as a record of the work we've quoted. After that we delete them. You can ask us to delete yours sooner at any time. See below.",
+      "body_es": "Los envíos de formularios y los currículums se guardan en los servidores de Netlify en Estados Unidos y en nuestro sistema de correo electrónico.\n\nConservamos las solicitudes de empleo **dos años** desde su último contacto con nosotros, porque el trabajo eléctrico es estacional y quien no encaja en un trabajo suele encajar en el siguiente. Las consultas generales y las solicitudes de personal las conservamos **tres años** como registro del trabajo que hemos cotizado. Después las eliminamos. Puede pedirnos que eliminemos la suya antes en cualquier momento — vea más abajo."
+    },
+    {
+      "heading": "Security",
+      "heading_es": "Seguridad",
+      "body": "This site is served over HTTPS, so what you type is encrypted between your browser and us. Our form and file storage is protected by the access controls of the providers named above, and only our staff have accounts.\n\nNo website can promise perfect security. Please don't send us documents through this site that you would not be comfortable having stored by a small business.",
+      "body_es": "Este sitio se sirve por HTTPS, así que lo que usted escribe viaja cifrado entre su navegador y nosotros. El almacenamiento de formularios y archivos está protegido por los controles de acceso de los proveedores mencionados arriba, y solo nuestro personal tiene cuentas.\n\nNingún sitio web puede prometer seguridad perfecta. Por favor no nos envíe por este sitio documentos que no se sentiría cómodo dejando guardados en un negocio pequeño."
+    },
+    {
+      "heading": "Your choices",
+      "heading_es": "Sus opciones",
+      "body": "Write to us at info@ncfalconstaffing.com and you can ask us to:\n\n- Tell you what we hold about you.\n- Correct anything that's wrong.\n- Delete your application, your resume, or your enquiry.\n- Stop contacting you about work.\n\nWe'll action any of these within 30 days. You don't need to give a reason, and asking will never count against a future application. Depending on where you live, you may have additional rights under state privacy law. Tell us and we'll honour them.",
+      "body_es": "Escríbanos a info@ncfalconstaffing.com y puede pedirnos que:\n\n- Le digamos qué información tenemos sobre usted.\n- Corrijamos cualquier dato incorrecto.\n- Eliminemos su solicitud, su currículum o su consulta.\n- Dejemos de contactarlo por trabajo.\n\nAtenderemos cualquiera de estas peticiones en un plazo de 30 días. No tiene que dar explicaciones, y pedirlo nunca le perjudicará en una solicitud futura. Según dónde viva, es posible que tenga derechos adicionales bajo la ley de privacidad de su estado. Díganoslo y los respetaremos."
+    },
+    {
+      "heading": "Cookies and tracking",
+      "heading_es": "Cookies y rastreo",
+      "body": "This site sets no cookies, uses no analytics, embeds no social media pixels, and loads no third-party fonts or scripts on its public pages. You will never see a cookie banner here, because we have nothing to ask your permission for.\n\nOur staff-only site editor at /admin is the one exception. It is a password-protected tool for our own team and it loads its software from a third-party host. It is not part of your visit.",
+      "body_es": "Este sitio no usa cookies, no usa analítica, no incrusta píxeles de redes sociales y no carga tipografías ni scripts de terceros en sus páginas públicas. Nunca verá un aviso de cookies aquí, porque no tenemos nada que pedirle permiso para hacer.\n\nNuestro editor interno en /admin es la única excepción. Es una herramienta protegida con contraseña para nuestro propio equipo y carga su software desde un servicio externo. No forma parte de su visita."
+    },
+    {
+      "heading": "Children",
+      "heading_es": "Menores",
+      "body": "This site is meant for people seeking or offering skilled electrical work, and we do not knowingly collect information from anyone under 16. If you believe a child has sent us something, contact us and we will delete it.",
+      "body_es": "Este sitio está dirigido a personas que buscan u ofrecen trabajo eléctrico calificado, y no recopilamos a sabiendas información de menores de 16 años. Si cree que un menor nos ha enviado algo, contáctenos y lo eliminaremos."
+    },
+    {
+      "heading": "Changes to this policy",
+      "heading_es": "Cambios a esta política",
+      "body": "If we change how we handle your information, we'll update this page and change the date at the top. Material changes will be noted here rather than made quietly.",
+      "body_es": "Si cambiamos la forma en que manejamos su información, actualizaremos esta página y cambiaremos la fecha de arriba. Los cambios importantes se anotarán aquí en lugar de hacerse en silencio."
+    }
+  ],
+  "contact_heading": "Contact us",
+  "contact_heading_es": "Contáctenos",
+  "contact_lead": "Questions about anything on this page:",
+  "contact_lead_es": "Preguntas sobre cualquier punto de esta página:"
+}

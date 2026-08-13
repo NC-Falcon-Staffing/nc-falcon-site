@@ -1,4 +1,4 @@
-/* NC Falcon — CMS content loader
+/* NC Falcon - CMS content loader
    Reads the JSON files in /content (managed through the site editor at /admin)
    and fills them into the page. The HTML keeps its original text as a
    fallback, so the site still renders if a file is missing. */
@@ -63,6 +63,15 @@
     });
   }
 
+  /* Same, for a single field that may contain **bold** or bullets.
+     data-cms-rich="path.in.json". See richText() for the format. */
+  function bindRich(data) {
+    document.querySelectorAll("[data-cms-rich]").forEach(function (el) {
+      var v = get(data, el.getAttribute("data-cms-rich"));
+      if (typeof v === "string" && v.length) el.innerHTML = richText(v);
+    });
+  }
+
   /* Icon set. 24x24 stroke paths; stroke="currentColor" so CSS sets the colour.
      Content files store an icon NAME ("clock"); unknown names fall back to bolt.
      To add one: add the path here AND the name to the dropdown in admin/config.yml. */
@@ -85,6 +94,25 @@
     "bolt": '<path d="M13.6 2.4L5 13.6h5.6l-1.2 8L18.6 10.4H13z"/>',
     "hard-hat": '<path d="M2.6 18h18.8"/><path d="M5.6 18v-1.4a6.4 6.4 0 0 1 12.8 0V18"/><path d="M9.9 16.6v-4.3a2.1 2.1 0 0 1 4.2 0v4.3"/>'
   };
+
+  /* Escape first, then add markup. See the "prose" renderer for the format. */
+  function inline(s) {
+    return esc(s).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+  }
+
+  function richText(raw) {
+    if (typeof raw !== "string" || !raw.length) return "";
+    return raw.split(/\n\s*\n/).map(function (block) {
+      var lines = block.split("\n");
+      var bullets = lines.filter(function (l) { return /^\s*-\s+/.test(l); });
+      if (bullets.length === lines.length) {
+        return '<ul class="checks">' + bullets.map(function (l) {
+          return "<li>" + inline(l.replace(/^\s*-\s+/, "")) + "</li>";
+        }).join("") + "</ul>";
+      }
+      return "<p>" + inline(block.replace(/\n/g, " ")) + "</p>";
+    }).join("");
+  }
 
   function icon(name) {
     var p = ICON_PATHS[name] || ICON_PATHS.bolt;
@@ -117,7 +145,7 @@
     },
     positions: function (items) {
       return items.map(function (i) {
-        return "<li><strong>" + esc(tr(i, "name")) + "</strong> — " + esc(tr(i, "description")) + "</li>";
+        return "<li><strong>" + esc(tr(i, "name")) + "</strong> - " + esc(tr(i, "description")) + "</li>";
       }).join("");
     },
     checksStrong: function (items) {
@@ -132,6 +160,22 @@
       return items.map(function (i, n) {
         var last = n === items.length - 1 ? "margin-bottom:0;" : "";
         return '<p style="color:var(--gray-200);' + last + '">' + esc(tr(i, "text")) + "</p>";
+      }).join("");
+    },
+    /* Long-form prose blocks, used by the privacy policy. The editor types
+       plain text in one box; this turns it into paragraphs and bullets.
+
+       Blank line       -> new paragraph
+       Line starting -  -> bullet
+       **text**         -> bold
+
+       Deliberately not a markdown library. Everything is escaped FIRST and the
+       markup applied to the escaped string afterwards, so editor text can
+       never inject HTML. Keep that order if you extend this. */
+    prose: function (items) {
+      return items.map(function (i) {
+        var heading = esc(tr(i, "heading"));
+        return (heading ? "<h2>" + heading + "</h2>" : "") + richText(tr(i, "body"));
       }).join("");
     },
     teamCards: function (items) {
@@ -166,6 +210,32 @@
       });
       if (page === "gallery") {
         window.location.replace(IS_ES ? "/es/index.html" : "/index.html");
+        return;
+      }
+    }
+
+    /* Spanish privacy policy on/off, set by "Show the Spanish privacy policy"
+       in the site editor. It is a legal document, so it stays off until a
+       native speaker has reviewed the translation.
+
+       When off, Spanish visitors are sent to the ENGLISH policy rather than to
+       the home page. Someone who clicks "Privacidad" wants the policy, and a
+       policy they can read beats no policy at all. Same reason the Spanish
+       footer link is rewritten rather than hidden. */
+    if (s.show_privacy_es !== true) {
+      /* Order matters. The language toggle is also an <a href="/es/privacy.html">,
+         so it has to be redirected to the Spanish home page BEFORE the general
+         rewrite below, or it ends up pointing at the page it is already on. */
+      if (page === "privacy" && !IS_ES) {
+        document.querySelectorAll('.lang-toggle').forEach(function (a) {
+          a.setAttribute("href", "/es/index.html");
+        });
+      }
+      document.querySelectorAll('a[href="/es/privacy.html"]').forEach(function (a) {
+        a.setAttribute("href", "/privacy.html");
+      });
+      if (page === "privacy" && IS_ES) {
+        window.location.replace("/privacy.html");
         return;
       }
     }
@@ -273,6 +343,7 @@
     jobs.push(loadJSON("/content/" + page + ".json").then(function (data) {
       if (!data) return;
       bindText(data);
+      bindRich(data);
       bindLists(data);
       if (page === "gallery") applyGallery(data);
     }));

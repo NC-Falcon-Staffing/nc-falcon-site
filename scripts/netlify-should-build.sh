@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# Netlify build gate — decides whether a push deserves a deploy.
+# Netlify build gate - decides whether a push deserves a deploy.
 #
 # Netlify runs this as the [build] "ignore" command and reads the exit code:
 #   exit 0  ->  SKIP the build. Nothing deploys, the live site is untouched.
@@ -19,7 +19,7 @@
 #
 # The rules, in order:
 #   1. Anything changed outside those two  ->  BUILD.
-#      That's HTML, CSS, JS, config — developer work, always deploy it.
+#      That's HTML, CSS, JS, config - developer work, always deploy it.
 #   2. content/publish.json changed        ->  BUILD.
 #      That's the editor pressing Publish.
 #   3. Only editor work changed            ->  SKIP.
@@ -38,7 +38,7 @@ skip()   { echo "SKIP: $1";  exit 0; }
 : "${COMMIT_REF:=}"
 
 # First deploy, cleared cache, or a manual "Trigger deploy" from the Netlify
-# dashboard — there's no previous commit to compare against.
+# dashboard - there's no previous commit to compare against.
 if [ -z "$CACHED_COMMIT_REF" ] || [ -z "$COMMIT_REF" ]; then
   build "no previous deploy to compare against"
 fi
@@ -61,15 +61,15 @@ fi
 echo "Changed since last deploy:"
 echo "$CHANGED" | sed 's/^/  /'
 
-# Rule 2 — the Publish button.
+# Rule 2 - the Publish button.
 if echo "$CHANGED" | grep -qx 'content/publish\.json'; then
-  build "content/publish.json changed — editor pressed Publish"
+  build "content/publish.json changed - editor pressed Publish"
 fi
 
-# Rule 1 — anything that isn't editor content.
+# Rule 1 - anything that isn't editor content.
 if echo "$CHANGED" | grep -qvE '^(content/|images/uploads/)'; then
   build "files changed outside content/ and images/uploads/"
 fi
 
-# Rule 3 — saved editor work, not published yet.
-skip "only unpublished editor content changed — waiting for a Publish Site save"
+# Rule 3 - saved editor work, not published yet.
+skip "only unpublished editor content changed - waiting for a Publish Site save"

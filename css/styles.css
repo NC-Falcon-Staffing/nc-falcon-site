@@ -1,5 +1,5 @@
 /* ==========================================================================
-   NC Falcon — Electrical Staffing
+   NC Falcon - Electrical Staffing
    Shared stylesheet. Theme: Navy / Gray / White. Professional but blue-collar.
    ========================================================================== */
 
@@ -7,7 +7,7 @@
   --navy: #0f2542;
   --navy-700: #173759;
   --navy-500: #2b5081;
-  --accent: #f5a623;        /* hard-hat amber — used sparingly for CTAs */
+  --accent: #f5a623;        /* hard-hat amber - used sparingly for CTAs */
   --accent-700: #d98c0c;
   --gray-900: #1f2733;
   --gray-700: #43505f;
@@ -54,7 +54,7 @@ a:hover { text-decoration: underline; }
 }
 .skip-link:focus { top: 0; text-decoration: none; }
 
-/* <main> is a jump target, not an interactive element — the visible outline on
+/* <main> is a jump target, not an interactive element - the visible outline on
    a programmatic focus is noise. The skip link itself stays clearly focused. */
 main:focus { outline: none; }
 
@@ -296,6 +296,13 @@ p:last-child { margin-bottom: 0; }
 }
 .field textarea { resize: vertical; min-height: 110px; }
 .field input[type="file"] { padding: 0.5rem; background: var(--gray-100); }
+/* Long-form policy pages. The headings are spaced here rather than inline so
+   the CMS-rendered version and the HTML fallback look identical. */
+.policy h2 { margin-top: 2.5rem; }
+.policy h2:first-of-type { margin-top: 2rem; }
+.policy .checks { margin: 0.75rem 0 1rem; }
+.policy .notice { margin-bottom: 1rem; }
+
 .form-note { font-size: 0.85rem; color: var(--gray-500); margin-top: 0.4rem; }
 
 /* The data notice that sits just above each submit button. */
@@ -420,7 +427,7 @@ code {
   .footer-grid { grid-template-columns: 1fr; }
 }
 
-/* Netlify Forms honeypot — must never be visible to humans */
+/* Netlify Forms honeypot - must never be visible to humans */
 .hp-field,
 .hp-field[hidden] {
   display: none !important;

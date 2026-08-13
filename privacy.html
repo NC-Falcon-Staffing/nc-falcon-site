@@ -7,8 +7,13 @@
   <meta name="description" content="What NC Falcon collects through its contact and application forms, who we share it with, how long we keep it, and how to ask us to delete it." />
   <link rel="canonical" href="https://ncfalconstaffing.com/privacy.html" />
   <link rel="alternate" hreflang="en" href="https://ncfalconstaffing.com/privacy.html" />
-  <link rel="alternate" hreflang="es" href="https://ncfalconstaffing.com/es/privacy.html" />
   <link rel="alternate" hreflang="x-default" href="https://ncfalconstaffing.com/privacy.html" />
+  <!-- The hreflang="es" pair is deliberately absent while the Spanish policy is
+       switched off in the site editor. Advertising a URL we redirect away from
+       tells search engines to index an unreviewed legal translation. Restore
+       this line, the sitemap entry, and the noindex on es/privacy.html together
+       when "Show the Spanish privacy policy" is turned on:
+       <link rel="alternate" hreflang="es" href="https://ncfalconstaffing.com/es/privacy.html" /> -->
 
   <!-- Social link previews (email, iMessage, LinkedIn, Facebook) -->
   <meta property="og:type" content="website" />
@@ -31,10 +36,7 @@
   <link rel="shortcut icon" href="images/favicon.ico" />
   <link rel="apple-touch-icon" href="images/favicon-180.png" />
 </head>
-<!-- No data-page attribute: this page has no entry in /content, so there is
-     nothing for the site editor to load. The footer and contact details still
-     update from content/settings.json like everywhere else. -->
-<body>
+<body data-page="privacy">
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
@@ -59,75 +61,56 @@
   <section class="page-head">
     <div class="container">
       <div class="breadcrumb"><a href="index.html">Home</a> / Privacy Policy</div>
-      <h1>Privacy Policy</h1>
-      <p>Last updated: August 11, 2026</p>
+      <h1 data-cms="page_head.title">Privacy Policy</h1>
+      <p data-cms="page_head.updated">Last updated: August 11, 2026</p>
     </div>
   </section>
 
   <section class="section">
-    <div class="container" style="max-width:760px;">
-
-      <p>NC Falcon Electrical Staffing ("NC Falcon", "we", "us") is an electrical staffing company based in Charlotte, North Carolina. This page explains what we collect through this website, why, and what you can ask us to do about it. It is written to be read, not to be skimmed past.</p>
-
-      <h2 style="margin-top:2.5rem;">The short version</h2>
-      <div class="notice">
-        <strong>We collect only what you type into our forms.</strong> This site sets no cookies, runs no analytics, and has no advertising or tracking scripts of any kind. If you never submit a form, we never learn who you are.
+    <div class="container policy" style="max-width:760px;">
+      <div data-cms-rich="intro">
+        <p>NC Falcon Electrical Staffing ("NC Falcon", "we", "us") is an electrical staffing company based in Charlotte, North Carolina. This page explains what we collect through this website, why, and what you can ask us to do about it.</p>
       </div>
 
-      <h2 style="margin-top:2.5rem;">What we collect</h2>
-      <p>Four forms on this site send information to us. Each one collects only what it shows on screen:</p>
-      <ul class="checks">
-        <li><strong>Request manpower</strong> (contractors) — company name, contact name, phone, email, project location, crew size, skill level, dates, and any notes you add.</li>
-        <li><strong>Apply for work</strong> (electricians) — your name, phone, email, city, years of experience, skill level, certifications, anything you write in the skills box, and <strong>your resume file</strong> if you choose to upload one.</li>
-        <li><strong>Send us a message</strong> — your name, email, optional phone, what kind of inquiry it is, and your message.</li>
-        <li><strong>Request a meeting</strong> — your name, optional company, email, phone, preferred date and time, and what you'd like to discuss.</li>
-      </ul>
-      <p>Our forms also record which language version of the site you used, so we can reply in English or Spanish.</p>
-      <p>We do not ask for, and you should not send us, your Social Security number, date of birth, driver's licence number, bank details, or immigration documents through this website. If we need any of that to place you on a job, we will collect it separately and tell you why at the time.</p>
+      <h2 data-cms="summary_heading">The short version</h2>
+      <div class="notice" data-cms-rich="summary">
+        <p><strong>We collect only what you type into our forms.</strong> This site sets no cookies, runs no analytics, and has no advertising or tracking scripts. If you never submit a form, we never learn who you are.</p>
+      </div>
 
-      <h2 style="margin-top:2.5rem;">Why we collect it</h2>
-      <p>To do the thing you asked us to do: reply to your message, quote a manpower request, or consider you for electrical work. For applicants, that means reviewing your experience against jobs we are staffing and contacting you about ones that fit.</p>
-      <p>We do not sell your information. We do not rent it, trade it, or hand it to data brokers or advertisers.</p>
+      <div data-cms-list="sections" data-cms-type="prose">
+        <h2>What we collect</h2>
+        <p>Four forms on this site send information to us. Each one collects only what it shows on screen:</p>
+        <ul class="checks"><li><strong>Request manpower</strong> (contractors) - company name, contact name, phone, email, project location, crew size, skill level, dates, and any notes you add.</li><li><strong>Apply for work</strong> (electricians) - your name, phone, email, city, years of experience, skill level, certifications, anything you write in the skills box, and <strong>your resume file</strong> if you choose to upload one.</li><li><strong>Send us a message</strong> - your name, email, optional phone, what kind of inquiry it is, and your message.</li><li><strong>Request a meeting</strong> - your name, optional company, email, phone, preferred date and time, and what you'd like to discuss.</li></ul>
+        <p>Our forms also record which language version of the site you used, so we can reply in English or Spanish.</p>
+        <p>We do not ask for, and you should not send us, your Social Security number, date of birth, driver's licence number, bank details, or immigration documents through this website. If we need any of that to place you on a job, we will collect it separately and tell you why at the time.</p>
+        <h2>Why we collect it</h2>
+        <p>To do the thing you asked us to do: reply to your message, quote a manpower request, or consider you for electrical work. For applicants, that means reviewing your experience against jobs we are staffing and contacting you about ones that fit.</p>
+        <p>We do not sell your information. We do not rent it, trade it, or hand it to data brokers or advertisers.</p>
+        <h2>Who else sees it</h2>
+        <p>These three, and no one else:</p>
+        <ul class="checks"><li><strong>Our own staff</strong> read and act on submissions.</li><li><strong>Contractors we staff for.</strong> We are a staffing agency. If we put you forward for a job, we share the parts of your application a contractor needs to make a hiring decision: your name, experience, skill level, certifications, and resume. We do this only when we are proposing you for actual work.</li><li><strong>The services that run this website.</strong> Netlify, who host the site and receive form submissions on our behalf, and our email provider, who delivers those submissions to us. They process this information for us and are not permitted to use it for anything else.</li></ul>
+        <p>We may also disclose information if the law requires it, or to protect our rights, safety, or property.</p>
+        <h2>Where it is stored, and for how long</h2>
+        <p>Form submissions and uploaded resumes are stored on Netlify's servers in the United States and in our email system.</p>
+        <p>We keep applications for <strong>two years</strong> from your last contact with us, because electrical work is seasonal and a candidate who isn't right for one job is often right for the next. General enquiries and manpower requests we keep for <strong>three years</strong> as a record of the work we've quoted. After that we delete them. You can ask us to delete yours sooner at any time. See below.</p>
+        <h2>Security</h2>
+        <p>This site is served over HTTPS, so what you type is encrypted between your browser and us. Our form and file storage is protected by the access controls of the providers named above, and only our staff have accounts.</p>
+        <p>No website can promise perfect security. Please don't send us documents through this site that you would not be comfortable having stored by a small business.</p>
+        <h2>Your choices</h2>
+        <p>Write to us at info@ncfalconstaffing.com and you can ask us to:</p>
+        <ul class="checks"><li>Tell you what we hold about you.</li><li>Correct anything that's wrong.</li><li>Delete your application, your resume, or your enquiry.</li><li>Stop contacting you about work.</li></ul>
+        <p>We'll action any of these within 30 days. You don't need to give a reason, and asking will never count against a future application. Depending on where you live, you may have additional rights under state privacy law. Tell us and we'll honour them.</p>
+        <h2>Cookies and tracking</h2>
+        <p>This site sets no cookies, uses no analytics, embeds no social media pixels, and loads no third-party fonts or scripts on its public pages. You will never see a cookie banner here, because we have nothing to ask your permission for.</p>
+        <p>Our staff-only site editor at /admin is the one exception. It is a password-protected tool for our own team and it loads its software from a third-party host. It is not part of your visit.</p>
+        <h2>Children</h2>
+        <p>This site is meant for people seeking or offering skilled electrical work, and we do not knowingly collect information from anyone under 16. If you believe a child has sent us something, contact us and we will delete it.</p>
+        <h2>Changes to this policy</h2>
+        <p>If we change how we handle your information, we'll update this page and change the date at the top. Material changes will be noted here rather than made quietly.</p>
+      </div>
 
-      <h2 style="margin-top:2.5rem;">Who else sees it</h2>
-      <p>Three groups, and no one else:</p>
-      <ul class="checks">
-        <li><strong>Our own staff</strong>, who read and act on submissions.</li>
-        <li><strong>Contractors we staff for</strong> — this is the part worth reading twice. We are a staffing agency. If we put you forward for a job, we share the parts of your application a contractor needs to make a hiring decision: your name, experience, skill level, certifications, and resume. We do this only when we are proposing you for actual work.</li>
-        <li><strong>The services that run this website</strong> — Netlify, who host the site and receive form submissions on our behalf, and our email provider, who delivers those submissions to us. They process this information for us and are not permitted to use it for anything else.</li>
-      </ul>
-      <p>We may also disclose information if the law requires it, or to protect our rights, safety, or property.</p>
-
-      <h2 style="margin-top:2.5rem;">Where it is stored, and for how long</h2>
-      <p>Form submissions and uploaded resumes are stored on Netlify's servers in the United States and in our email system.</p>
-      <p>We keep applications for <strong>two years</strong> from your last contact with us, because electrical work is seasonal and a candidate who isn't right for one job is often right for the next. General enquiries and manpower requests we keep for <strong>three years</strong> as a record of the work we've quoted. After that we delete them. You can ask us to delete yours sooner at any time — see below.</p>
-
-      <h2 style="margin-top:2.5rem;">Security, honestly stated</h2>
-      <p>This site is served over HTTPS, so what you type is encrypted between your browser and us. Our form and file storage is protected by the access controls of the providers named above, and only our staff have accounts.</p>
-      <p>That said, no website can promise perfect security, and we won't pretend otherwise. Please don't send us documents through this site that you would not be comfortable having stored by a small business.</p>
-
-      <h2 style="margin-top:2.5rem;">Your choices</h2>
-      <p>Write to us at <a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a> and you can ask us to:</p>
-      <ul class="checks">
-        <li>Tell you what we hold about you.</li>
-        <li>Correct anything that's wrong.</li>
-        <li>Delete your application, your resume, or your enquiry.</li>
-        <li>Stop contacting you about work.</li>
-      </ul>
-      <p>We'll action any of these within 30 days. You don't need to give a reason, and asking will never count against a future application. Depending on where you live, you may have additional rights under state privacy law; tell us and we'll honour them.</p>
-
-      <h2 style="margin-top:2.5rem;">Cookies and tracking</h2>
-      <p>There are none. This site sets no cookies, uses no analytics, embeds no social media pixels, and loads no third-party fonts or scripts on its public pages. Nothing here follows you around the internet. That's why you'll never see a cookie banner on this site — we have nothing to ask your permission for.</p>
-      <p>Our staff-only site editor at <code>/admin</code> is the one exception: it is a password-protected tool for our own team and it loads its software from a third-party host. It is not part of your visit.</p>
-
-      <h2 style="margin-top:2.5rem;">Children</h2>
-      <p>This site is meant for people seeking or offering skilled electrical work, and we do not knowingly collect information from anyone under 16. If you believe a child has sent us something, contact us and we will delete it.</p>
-
-      <h2 style="margin-top:2.5rem;">Changes to this policy</h2>
-      <p>If we change how we handle your information, we'll update this page and change the date at the top. Material changes will be noted here rather than made quietly.</p>
-
-      <h2 style="margin-top:2.5rem;">Contact us</h2>
-      <p>Questions about anything on this page:</p>
+      <h2 data-cms="contact_heading">Contact us</h2>
+      <p data-cms="contact_lead">Questions about anything on this page:</p>
       <ul class="footer-links" style="list-style:none;padding:0;">
         <li><a href="mailto:info@ncfalconstaffing.com">info@ncfalconstaffing.com</a></li>
         <li><a href="mailto:careers@ncfalconstaffing.com">careers@ncfalconstaffing.com</a> (applications and resumes)</li>
