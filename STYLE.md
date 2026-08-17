@@ -61,6 +61,27 @@ Often the better fix is not swapping the character but restructuring the
 sentence, since a dash in the middle of a sentence is frequently the "emphasis
 kicker" pattern above wearing a different hat. Reach for that first.
 
+## Spelling
+
+**American English.** The business is in Charlotte, NC and the readers are US
+contractors and electricians. This covers site copy, content JSON, code
+comments, docs and assistant replies, same scope as the punctuation rule.
+
+The ones that actually come up:
+
+| Not this | This |
+| --- | --- |
+| enquiry, enquiries | inquiry, inquiries |
+| licence | license |
+| honour | honor |
+| colour, colours | color, colors |
+| judgement | judgment |
+| cancelled | canceled |
+| organise, realise, recognise | organize, realize, recognize |
+
+Worth a grep before publishing anything long, because British spellings do not
+look like typos. They read as correct and slip straight past a proofread.
+
 ## When editing copy
 
 Two things bite here, both silent:
@@ -80,7 +101,7 @@ site pages. The content JSON is already clean, as are the privacy pages, the
 README, the build script, the CMS config and the working notes in
 `_local-docs/`.
 
-Under the current rule this is a judgement pass, not a search and replace. Most
+Under the current rule this is a judgment pass, not a search and replace. Most
 of those 60 are fine on their own. What matters is a page carrying several.
 Restructure the sentence where the dash is an emphasis kicker, and leave the
 rest alone.

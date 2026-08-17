@@ -230,7 +230,7 @@ collections:
                     widget: "select"
                     options: ["bolt", "hard-hat", "sliders", "shield", "shield-check", "clock", "calendar", "users", "chat", "phone", "envelope", "briefcase", "clipboard", "map-pin", "home", "trend-up", "banknote"]
                     default: "bolt"
-                    hint: "Pick an icon for this card. All icons use the brand colours automatically."
+                    hint: "Pick an icon for this card. All icons use the brand colors automatically."
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
                   - { label: "Text", name: "text", widget: "text" }
@@ -356,7 +356,7 @@ collections:
                     widget: "select"
                     options: ["bolt", "hard-hat", "sliders", "shield", "shield-check", "clock", "calendar", "users", "chat", "phone", "envelope", "briefcase", "clipboard", "map-pin", "home", "trend-up", "banknote"]
                     default: "bolt"
-                    hint: "Pick an icon for this card. All icons use the brand colours automatically."
+                    hint: "Pick an icon for this card. All icons use the brand colors automatically."
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
                   - { label: "Text", name: "text", widget: "text" }
@@ -514,7 +514,7 @@ collections:
                     widget: "select"
                     options: ["bolt", "hard-hat", "sliders", "shield", "shield-check", "clock", "calendar", "users", "chat", "phone", "envelope", "briefcase", "clipboard", "map-pin", "home", "trend-up", "banknote"]
                     default: "bolt"
-                    hint: "Pick an icon for this card. All icons use the brand colours automatically."
+                    hint: "Pick an icon for this card. All icons use the brand colors automatically."
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Title (Español)", name: "title_es", widget: "string", required: false }
                   - { label: "Text", name: "text", widget: "text" }

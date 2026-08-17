@@ -72,7 +72,7 @@
     });
   }
 
-  /* Icon set. 24x24 stroke paths; stroke="currentColor" so CSS sets the colour.
+  /* Icon set. 24x24 stroke paths; stroke="currentColor" so CSS sets the color.
      Content files store an icon NAME ("clock"); unknown names fall back to bolt.
      To add one: add the path here AND the name to the dropdown in admin/config.yml. */
   var ICON_PATHS = {

@@ -17,7 +17,7 @@ privacy.html          Privacy policy. Not CMS-editable - edit the HTML directly.
 thank-you.html        Shown after any form submit
 404.html              Not found
 
-css/styles.css        All styling. Colours and spacing are variables at the top.
+css/styles.css        All styling. Colors and spacing are variables at the top.
 js/main.js            Mobile nav, active link, form submit state
 js/cms-content.js     Loads /content JSON into the pages; holds the icon set
 
@@ -71,7 +71,7 @@ box someone can edit by accident.
 Three things in it are claims about how the business actually operates, not
 boilerplate, and they need to stay true:
 
-- **Retention** - two years for applications, three for enquiries. If you keep
+- **Retention** - two years for applications, three for inquiries. If you keep
   data longer, change the page.
 - **Sharing with contractors** - it says applicant details go to a contractor
   only when NC Falcon puts that person forward for a job.
@@ -139,7 +139,7 @@ dashboard - a manual trigger has no previous commit to compare against, so it
 always builds.
 
 Failed builds leave the previous version live; the Deploys tab has the log and
-lets you roll back. A skipped build shows in the Deploys list as cancelled,
+lets you roll back. A skipped build shows in the Deploys list as canceled,
 with the reason in the log.
 
 ## Security headers
